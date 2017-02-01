@@ -1,0 +1,79 @@
+[
+  {
+    "type": "web",
+    "label": "targid",
+    "repo": "Caleydo/targid2",
+    "branch": "migrate",
+    "additional": [
+      {
+        "name": "targid_common",
+        "repo": "Caleydo/targid_common",
+        "branch": "migrate"
+      },
+      {
+        "name": "targid_genehopper",
+        "repo": "Caleydo/targid_genehopper",
+        "branch": "migrate"
+      },
+	  {
+        "name": "lineup4bi",
+		"repo": "Caleydo/lineup4bi",
+		"branch": "migrate"
+	  },
+      {
+        "name": "targid_lineup4bi",
+        "repo": "Caleydo/targid_lineup4bi",
+        "branch": "migrate"
+      }
+    ]
+  },
+  {
+    "type": "web",
+    "label": "lineup4bi",
+    "repo": "Caleydo/lineup4bi",
+    "branch": "migrate"
+  },
+  {
+    "type": "api",
+    "label": "targid_server",
+    "repo": "phovea/phovea_server",
+    "branch": "develop",
+    "additional": [
+      {
+        "name": "phovea_security_flask",
+        "repo": "phovea/phovea_security_flask",
+        "branch": "develop"
+      },
+      {
+        "name": "phovea_data_redis",
+        "repo": "phovea/phovea_data_redis",
+        "branch": "develop"
+      },
+      {
+        "name": "phovea_data_mongo",
+        "repo": "phovea/phovea_data_mongo",
+        "branch": "develop"
+      },
+      {
+        "name": "phovea_clue",
+        "repo": "phovea/phovea_clue",
+        "branch": "develop"
+      },
+      {
+        "name": "targid2",
+        "repo": "Caleydo/targid2",
+        "branch": "migrate"
+      },
+      {
+        "name": "targid_bioinfodb",
+        "repo": "Caleydo/targid_bioinfodb",
+        "branch": "migrate"
+      },
+      {
+        "name": "lineup4bi",
+        "repo": "Caleydo/lineup4bi",
+        "branch": "migrate"
+      }
+    ]
+  }
+]
