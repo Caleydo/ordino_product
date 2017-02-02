@@ -42,6 +42,11 @@
         "name": "targid2",
         "repo": "Caleydo/targid2",
         "branch": "migrate"
+      },
+	  {
+        "name": "targid_dummy",
+        "repo": "Caleydo/targid_dummy",
+        "branch": "migrate"
       }
     ]
   }
