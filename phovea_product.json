@@ -24,11 +24,6 @@
         "branch": "develop"
       },
       {
-        "name": "phovea_data_redis",
-        "repo": "phovea/phovea_data_redis",
-        "branch": "develop"
-      },
-      {
         "name": "phovea_data_mongo",
         "repo": "phovea/phovea_data_mongo",
         "branch": "develop"
@@ -43,7 +38,7 @@
         "repo": "Caleydo/ordino",
         "branch": "master"
       },
-	  {
+      {
         "name": "ordino_dummy",
         "repo": "Caleydo/ordino_dummy",
         "branch": "master"
