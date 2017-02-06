@@ -1,8 +1,25 @@
 {
+  "name": "ordino_product",
+  "description": "",
+  "homepage": "https://phovea.caleydo.org",
+  "version": "1.0.0-SNAPSHOT",
+  "author": {
+    "name": "Samuel Gratzl",
+    "email": "samuel_gratzl@gmx.at",
+    "url": ""
+  },
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/Caleydo/ordino_product/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Caleydo/ordino_product.git"
+  },
   "scripts": {
     "build": "node build.js --skipTests",
     "predist": "npm run build",
-    "dist": "mkdirp dist && cd build && tar cvzf ../dist/targid_product.tar.gz *"
+    "dist": "mkdirp dist && cd build && tar cvzf ../dist/ordino_product.tar.gz *"
   },
   "dependencies": {
     "bluebird": "3.4.6",
@@ -14,22 +31,5 @@
     "yamljs": "0.2.8",
     "yargs-parser": "4.2.0",
     "yeoman-environment": "1.6.6"
-  },
-  "name": "targid_product",
-  "description": "",
-  "homepage": "https://phovea.caleydo.org",
-  "version": "1.0.0-SNAPSHOT",
-  "author": {
-    "name": "Samuel Gratzl",
-    "email": "samuel_gratzl@gmx.at",
-    "url": ""
-  },
-  "license": "BSD-3-Clause",
-  "bugs": {
-    "url": "https://github.com/Caleydo/targid_product/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Caleydo/targid_product.git"
   }
 }

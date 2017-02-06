@@ -1,20 +1,20 @@
 [
   {
     "type": "web",
-    "label": "targid",
-    "repo": "Caleydo/targid2",
-    "branch": "migrate",
+    "label": "ordino",
+    "repo": "Caleydo/ordino",
+    "branch": "master",
     "additional": [
       {
-        "name": "targid_dummy",
-        "repo": "Caleydo/targid_dummy",
-        "branch": "migrate"
+        "name": "ordino_dummy",
+        "repo": "Caleydo/ordino_dummy",
+        "branch": "master"
       }
     ]
   },
   {
     "type": "api",
-    "label": "targid_server",
+    "label": "ordino_server",
     "repo": "phovea/phovea_server",
     "branch": "develop",
     "additional": [
@@ -39,14 +39,14 @@
         "branch": "develop"
       },
       {
-        "name": "targid2",
-        "repo": "Caleydo/targid2",
-        "branch": "migrate"
+        "name": "ordino",
+        "repo": "Caleydo/ordino",
+        "branch": "master"
       },
 	  {
-        "name": "targid_dummy",
-        "repo": "Caleydo/targid_dummy",
-        "branch": "migrate"
+        "name": "ordino_dummy",
+        "repo": "Caleydo/ordino_dummy",
+        "branch": "master"
       }
     ]
   }
