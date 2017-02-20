@@ -3,12 +3,12 @@
     "type": "web",
     "label": "ordino",
     "repo": "Caleydo/ordino",
-    "branch": "master",
+    "branch": "develop",
     "additional": [
       {
         "name": "ordino_dummy",
         "repo": "Caleydo/ordino_dummy",
-        "branch": "master"
+        "branch": "develop"
       }
     ]
   },
@@ -36,12 +36,12 @@
       {
         "name": "ordino",
         "repo": "Caleydo/ordino",
-        "branch": "master"
+        "branch": "develop"
       },
       {
         "name": "ordino_dummy",
         "repo": "Caleydo/ordino_dummy",
-        "branch": "master"
+        "branch": "develop"
       }
     ]
   }
