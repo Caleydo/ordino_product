@@ -6,8 +6,18 @@
     "branch": "develop",
     "additional": [
       {
-        "name": "ordino_dummy",
-        "repo": "Caleydo/ordino_dummy",
+        "name": "targid_common",
+        "repo": "Caleydo/targid_common",
+        "branch": "develop"
+      },
+      {
+        "name": "targid_genehopper",
+        "repo": "Caleydo/targid_genehopper",
+        "branch": "develop"
+      },
+      {
+        "name": "ordino_uploaded_data",
+        "repo": "Caleydo/ordino_uploaded_data",
         "branch": "develop"
       }
     ]
@@ -39,8 +49,18 @@
         "branch": "develop"
       },
       {
-        "name": "ordino_dummy",
-        "repo": "Caleydo/ordino_dummy",
+        "name": "targid_boehringer",
+        "repo": "Caleydo/targid_boehringer",
+        "branch": "develop"
+      },
+      {
+        "name": "ordino_uploaded_data",
+        "repo": "Caleydo/ordino_uploaded_data",
+        "branch": "develop"
+      },
+      {
+        "name": "targid_genehopper",
+        "repo": "Caleydo/targid_genehopper",
         "branch": "develop"
       }
     ]
