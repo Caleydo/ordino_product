@@ -39,6 +39,11 @@
         "branch": "develop"
       },
       {
+        "name": "phovea_data_redis",
+        "repo": "phovea/phovea_data_redis",
+        "branch": "develop"
+      },
+      {
         "name": "phovea_clue",
         "repo": "phovea/phovea_clue",
         "branch": "develop"
