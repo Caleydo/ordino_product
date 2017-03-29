@@ -1,7 +1,7 @@
 [
   {
     "type": "web",
-    "label": "targid",
+    "label": "ordino",
     "repo": "Caleydo/ordino",
     "branch": "develop",
     "additional": [
@@ -29,7 +29,7 @@
   },
   {
     "type": "api",
-    "label": "targid_server",
+    "label": "ordino_server",
     "repo": "phovea/phovea_server",
     "branch": "develop",
     "additional": [
