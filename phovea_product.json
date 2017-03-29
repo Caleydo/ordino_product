@@ -1,7 +1,7 @@
 [
   {
     "type": "web",
-    "label": "ordino",
+    "label": "targid",
     "repo": "Caleydo/ordino",
     "branch": "develop",
     "additional": [
@@ -16,6 +16,11 @@
         "branch": "develop"
       },
       {
+        "name": "targid_boehringer",
+        "repo": "Caleydo/targid_boehringer",
+        "branch": "develop"
+      },
+      {
         "name": "ordino_uploaded_data",
         "repo": "Caleydo/ordino_uploaded_data",
         "branch": "develop"
@@ -24,7 +29,7 @@
   },
   {
     "type": "api",
-    "label": "ordino_server",
+    "label": "targid_server",
     "repo": "phovea/phovea_server",
     "branch": "develop",
     "additional": [
@@ -34,13 +39,13 @@
         "branch": "develop"
       },
       {
-        "name": "phovea_data_mongo",
-        "repo": "phovea/phovea_data_mongo",
+        "name": "phovea_data_redis",
+        "repo": "phovea/phovea_data_redis",
         "branch": "develop"
       },
       {
-        "name": "phovea_data_redis",
-        "repo": "phovea/phovea_data_redis",
+        "name": "phovea_data_mongo",
+        "repo": "phovea/phovea_data_mongo",
         "branch": "develop"
       },
       {
