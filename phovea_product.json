@@ -6,7 +6,7 @@
     "branch": "master",
     "additional": [
 	  {
-        "name": "ordino_base",
+        "name": "ordino",
         "repo": "Caleydo/ordino",
         "branch": "develop"
       },
@@ -59,12 +59,12 @@
         "branch": "develop"
       },
       {
-        "name": "ordino_base",
+        "name": "ordino",
         "repo": "Caleydo/ordino",
         "branch": "develop"
       },
       {
-        "name": "ordino",
+        "name": "ordino_public",
         "repo": "Caleydo/ordino_public",
         "branch": "master"
       },
