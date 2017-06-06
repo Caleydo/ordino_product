@@ -2,9 +2,14 @@
   {
     "type": "web",
     "label": "ordino",
-    "repo": "Caleydo/ordino",
-    "branch": "develop",
+    "repo": "Caleydo/ordino_public",
+    "branch": "master",
     "additional": [
+	  {
+        "name": "ordino",
+        "repo": "Caleydo/ordino",
+        "branch": "develop"
+      },
       {
         "name": "targid_common",
         "repo": "Caleydo/targid_common",
@@ -57,6 +62,11 @@
         "name": "ordino",
         "repo": "Caleydo/ordino",
         "branch": "develop"
+      },
+      {
+        "name": "ordino",
+        "repo": "Caleydo/ordino_public",
+        "branch": "master"
       },
       {
         "name": "targid_boehringer",
