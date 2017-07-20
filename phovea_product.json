@@ -3,32 +3,32 @@
     "type": "web",
     "label": "ordino",
     "repo": "Caleydo/ordino_public",
-    "branch": "v2.1.0",
+    "branch": "develop",
     "additional": [
 	  {
         "name": "ordino",
         "repo": "Caleydo/ordino",
-        "branch": "v2.1.0"
+        "branch": "develop"
       },
       {
         "name": "targid_common",
         "repo": "Caleydo/targid_common",
-        "branch": "v2.1.0"
+        "branch": "develop"
       },
       {
         "name": "targid_genehopper",
         "repo": "Caleydo/targid_genehopper",
-        "branch": "v2.1.0"
+        "branch": "develop"
       },
       {
         "name": "targid_boehringer",
         "repo": "Caleydo/targid_boehringer",
-        "branch": "v2.1.0"
+        "branch": "develop"
       },
       {
         "name": "ordino_uploaded_data",
         "repo": "Caleydo/ordino_uploaded_data",
-        "branch": "v2.1.0"
+        "branch": "develop"
       }
     ]
   },
@@ -61,27 +61,27 @@
       {
         "name": "ordino",
         "repo": "Caleydo/ordino",
-        "branch": "v2.1.0"
+        "branch": "develop"
       },
       {
         "name": "ordino_public",
         "repo": "Caleydo/ordino_public",
-        "branch": "v2.1.0"
+        "branch": "develop"
       },
       {
         "name": "targid_boehringer",
         "repo": "Caleydo/targid_boehringer",
-        "branch": "v2.1.0"
+        "branch": "develop"
       },
       {
         "name": "ordino_uploaded_data",
         "repo": "Caleydo/ordino_uploaded_data",
-        "branch": "v2.1.0"
+        "branch": "develop"
       },
       {
         "name": "targid_genehopper",
         "repo": "Caleydo/targid_genehopper",
-        "branch": "v2.1.0"
+        "branch": "develop"
       }
     ]
   }
