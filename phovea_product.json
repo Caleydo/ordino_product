@@ -8,7 +8,7 @@
 	  {
         "name": "ordino",
         "repo": "Caleydo/ordino",
-        "branch": "develop"
+        "branch": "thinkh/provenance_retrieval"
       },
       {
         "name": "targid_common",
@@ -29,6 +29,26 @@
         "name": "ordino_uploaded_data",
         "repo": "Caleydo/ordino_uploaded_data",
         "branch": "develop"
+      },
+      {
+        "name": "phovea_core",
+        "repo": "phovea/phovea_core",
+        "branch": "thinkh/provenance_retrieval"
+      },
+      {
+        "name": "phovea_clue",
+        "repo": "phovea/phovea_clue",
+        "branch": "thinkh/provenance_retrieval"
+      },
+      {
+        "name": "phovea_d3",
+        "repo": "phovea/phovea_d3",
+        "branch": "thinkh/provenance_retrieval"
+      },
+      {
+        "name": "phovea_ui",
+        "repo": "phovea/phovea_ui",
+        "branch": "thinkh/provenance_retrieval"
       }
     ]
   },
@@ -36,12 +56,12 @@
     "type": "api",
     "label": "ordino_server",
     "repo": "phovea/phovea_server",
-    "branch": "develop",
+    "branch": "thinkh/provenance_retrieval",
     "additional": [
       {
         "name": "phovea_security_flask",
         "repo": "phovea/phovea_security_flask",
-        "branch": "develop"
+        "branch": "thinkh/provenance_retrieval"
       },
       {
         "name": "phovea_data_redis",
@@ -56,12 +76,12 @@
       {
         "name": "phovea_clue",
         "repo": "phovea/phovea_clue",
-        "branch": "develop"
+        "branch": "thinkh/provenance_retrieval"
       },
       {
         "name": "ordino",
         "repo": "Caleydo/ordino",
-        "branch": "develop"
+        "branch": "thinkh/provenance_retrieval"
       },
       {
         "name": "ordino_public",
