@@ -56,7 +56,7 @@
     "type": "api",
     "label": "ordino_server",
     "repo": "phovea/phovea_server",
-    "branch": "thinkh/provenance_retrieval",
+    "branch": "develop",
     "additional": [
       {
         "name": "phovea_security_flask",
