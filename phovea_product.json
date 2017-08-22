@@ -13,17 +13,17 @@
       {
         "name": "targid_common",
         "repo": "Caleydo/targid_common",
-        "branch": "develop"
+        "branch": "thinkh/provenance_retrieval"
       },
       {
         "name": "targid_genehopper",
         "repo": "Caleydo/targid_genehopper",
-        "branch": "develop"
+        "branch": "thinkh/provenance_retrieval"
       },
       {
         "name": "targid_boehringer",
         "repo": "Caleydo/targid_boehringer",
-        "branch": "develop"
+        "branch": "thinkh/provenance_retrieval"
       },
       {
         "name": "ordino_uploaded_data",
@@ -91,7 +91,7 @@
       {
         "name": "targid_boehringer",
         "repo": "Caleydo/targid_boehringer",
-        "branch": "develop"
+        "branch": "thinkh/provenance_retrieval"
       },
       {
         "name": "ordino_uploaded_data",
@@ -101,7 +101,7 @@
       {
         "name": "targid_genehopper",
         "repo": "Caleydo/targid_genehopper",
-        "branch": "develop"
+        "branch": "thinkh/provenance_retrieval"
       }
     ]
   }
