@@ -5,7 +5,12 @@
     "repo": "Caleydo/ordino_public",
     "branch": "tdp",
     "additional": [
-	    {
+      {
+        "name": "tdp_gene",
+        "repo": "Caleydo/tdp_gene",
+        "branch": "tdp"
+      },
+      {
         "name": "tdp_genehopper",
         "repo": "datavisyn/tdp_genehopper",
         "branch": "tdp"
