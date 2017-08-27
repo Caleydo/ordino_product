@@ -74,13 +74,13 @@
         "branch": "master"
       },
       {
-        "name": "tdp_uploaded_data",
-        "repo": "datavisyn/tdp_uploaded_data",
+        "name": "tdp_genehopper",
+        "repo": "datavisyn/tdp_genehopper",
         "branch": "tdp"
       },
       {
-        "name": "tdp_genehopper",
-        "repo": "datavisyn/tdp_genehopper",
+        "name": "tdp_uploaded_data",
+        "repo": "datavisyn/tdp_uploaded_data",
         "branch": "tdp"
       }
     ]
