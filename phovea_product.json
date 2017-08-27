@@ -3,32 +3,22 @@
     "type": "web",
     "label": "ordino",
     "repo": "Caleydo/ordino_public",
-    "branch": "develop",
+    "branch": "tdp",
     "additional": [
-	  {
-        "name": "ordino",
-        "repo": "Caleydo/ordino",
-        "branch": "develop"
+	    {
+        "name": "tdp_genehopper",
+        "repo": "datavisyn/tdp_genehopper",
+        "branch": "tdp"
       },
       {
-        "name": "targid_common",
-        "repo": "Caleydo/targid_common",
-        "branch": "develop"
+        "name": "tdp_publicdb",
+        "repo": "Caleydo/tdp_publicdb",
+        "branch": "tdp"
       },
       {
-        "name": "targid_genehopper",
-        "repo": "Caleydo/targid_genehopper",
-        "branch": "develop"
-      },
-      {
-        "name": "targid_boehringer",
-        "repo": "Caleydo/targid_boehringer",
-        "branch": "develop"
-      },
-      {
-        "name": "ordino_uploaded_data",
-        "repo": "Caleydo/ordino_uploaded_data",
-        "branch": "develop"
+        "name": "tdp_uploaded_data",
+        "repo": "datavisyn/tdp_uploaded_data",
+        "branch": "tdp"
       }
     ]
   },
@@ -59,29 +49,29 @@
         "branch": "develop"
       },
       {
-        "name": "ordino",
-        "repo": "Caleydo/ordino",
+        "name": "tdp_core",
+        "repo": "datavisyn/tdp_core",
         "branch": "develop"
       },
       {
         "name": "ordino_public",
         "repo": "Caleydo/ordino_public",
-        "branch": "develop"
+        "branch": "tdp"
       },
       {
-        "name": "targid_boehringer",
-        "repo": "Caleydo/targid_boehringer",
-        "branch": "develop"
+        "name": "tdp_bi_bioinfodb",
+        "repo": "Caleydo/tdp_bi_bioinfodb",
+        "branch": "tdp"
       },
       {
-        "name": "ordino_uploaded_data",
-        "repo": "Caleydo/ordino_uploaded_data",
-        "branch": "develop"
+        "name": "tdp_uploaded_data",
+        "repo": "datavisyn/tdp_uploaded_data",
+        "branch": "tdp"
       },
       {
-        "name": "targid_genehopper",
-        "repo": "Caleydo/targid_genehopper",
-        "branch": "develop"
+        "name": "tdp_genehopper",
+        "repo": "datavisyn/tdp_genehopper",
+        "branch": "tdp"
       }
     ]
   }
