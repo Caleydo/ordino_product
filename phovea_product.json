@@ -71,7 +71,7 @@
       {
         "name": "tdp_publicdb",
         "repo": "Caleydo/tdp_publicdb",
-        "branch": "tdp"
+        "branch": "master"
       },
       {
         "name": "tdp_uploaded_data",
