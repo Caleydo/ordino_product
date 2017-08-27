@@ -64,6 +64,11 @@
         "branch": "tdp"
       },
       {
+        "name": "tdp_publicdb",
+        "repo": "Caleydo/tdp_publicdb",
+        "branch": "tdp"
+      },
+      {
         "name": "tdp_uploaded_data",
         "repo": "datavisyn/tdp_uploaded_data",
         "branch": "tdp"
