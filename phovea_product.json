@@ -3,27 +3,27 @@
     "type": "web",
     "label": "ordino",
     "repo": "Caleydo/ordino_public",
-    "branch": "tdp",
+    "branch": "develop",
     "additional": [
       {
         "name": "tdp_gene",
         "repo": "Caleydo/tdp_gene",
-        "branch": "tdp"
+        "branch": "develop"
       },
       {
         "name": "tdp_genehopper",
         "repo": "datavisyn/tdp_genehopper",
-        "branch": "tdp"
+        "branch": "develop"
       },
       {
         "name": "tdp_publicdb",
         "repo": "Caleydo/tdp_publicdb",
-        "branch": "master"
+        "branch": "develop"
       },
       {
         "name": "tdp_uploaded_data",
         "repo": "datavisyn/tdp_uploaded_data",
-        "branch": "tdp"
+        "branch": "develop"
       }
     ]
   },
@@ -61,27 +61,27 @@
       {
         "name": "ordino_public",
         "repo": "Caleydo/ordino_public",
-        "branch": "tdp"
+        "branch": "develop"
       },
       {
         "name": "tdp_bi_bioinfodb",
         "repo": "Caleydo/tdp_bi_bioinfodb",
-        "branch": "tdp"
+        "branch": "develop"
       },
       {
         "name": "tdp_publicdb",
         "repo": "Caleydo/tdp_publicdb",
-        "branch": "master"
+        "branch": "develop"
       },
       {
         "name": "tdp_genehopper",
         "repo": "datavisyn/tdp_genehopper",
-        "branch": "tdp"
+        "branch": "develop"
       },
       {
         "name": "tdp_uploaded_data",
         "repo": "datavisyn/tdp_uploaded_data",
-        "branch": "tdp"
+        "branch": "develop"
       }
     ]
   }
