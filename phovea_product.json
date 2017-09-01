@@ -5,29 +5,24 @@
     "repo": "Caleydo/ordino_public",
     "branch": "develop",
     "additional": [
-	  {
-        "name": "ordino",
-        "repo": "Caleydo/ordino",
+      {
+        "name": "tdp_gene",
+        "repo": "Caleydo/tdp_gene",
         "branch": "develop"
       },
       {
-        "name": "targid_common",
-        "repo": "Caleydo/targid_common",
+        "name": "tdp_genehopper",
+        "repo": "datavisyn/tdp_genehopper",
         "branch": "develop"
       },
       {
-        "name": "targid_genehopper",
-        "repo": "Caleydo/targid_genehopper",
+        "name": "tdp_publicdb",
+        "repo": "Caleydo/tdp_publicdb",
         "branch": "develop"
       },
       {
-        "name": "targid_boehringer",
-        "repo": "Caleydo/targid_boehringer",
-        "branch": "develop"
-      },
-      {
-        "name": "ordino_uploaded_data",
-        "repo": "Caleydo/ordino_uploaded_data",
+        "name": "tdp_uploaded_data",
+        "repo": "datavisyn/tdp_uploaded_data",
         "branch": "develop"
       }
     ]
@@ -59,8 +54,8 @@
         "branch": "develop"
       },
       {
-        "name": "ordino",
-        "repo": "Caleydo/ordino",
+        "name": "tdp_core",
+        "repo": "datavisyn/tdp_core",
         "branch": "develop"
       },
       {
@@ -69,18 +64,23 @@
         "branch": "develop"
       },
       {
-        "name": "targid_boehringer",
-        "repo": "Caleydo/targid_boehringer",
+        "name": "tdp_bi_bioinfodb",
+        "repo": "Caleydo/tdp_bi_bioinfodb",
         "branch": "develop"
       },
       {
-        "name": "ordino_uploaded_data",
-        "repo": "Caleydo/ordino_uploaded_data",
+        "name": "tdp_publicdb",
+        "repo": "Caleydo/tdp_publicdb",
         "branch": "develop"
       },
       {
-        "name": "targid_genehopper",
-        "repo": "Caleydo/targid_genehopper",
+        "name": "tdp_genehopper",
+        "repo": "datavisyn/tdp_genehopper",
+        "branch": "develop"
+      },
+      {
+        "name": "tdp_uploaded_data",
+        "repo": "datavisyn/tdp_uploaded_data",
         "branch": "develop"
       }
     ]
