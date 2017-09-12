@@ -11,11 +11,6 @@
         "branch": "develop"
       },
       {
-        "name": "tdp_genehopper",
-        "repo": "datavisyn/tdp_genehopper",
-        "branch": "develop"
-      },
-      {
         "name": "tdp_publicdb",
         "repo": "Caleydo/tdp_publicdb",
         "branch": "develop"
@@ -66,11 +61,6 @@
       {
         "name": "tdp_publicdb",
         "repo": "Caleydo/tdp_publicdb",
-        "branch": "develop"
-      },
-      {
-        "name": "tdp_genehopper",
-        "repo": "datavisyn/tdp_genehopper",
         "branch": "develop"
       },
       {
