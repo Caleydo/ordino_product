@@ -64,11 +64,6 @@
         "branch": "develop"
       },
       {
-        "name": "tdp_bi_bioinfodb",
-        "repo": "Caleydo/tdp_bi_bioinfodb",
-        "branch": "develop"
-      },
-      {
         "name": "tdp_publicdb",
         "repo": "Caleydo/tdp_publicdb",
         "branch": "develop"
