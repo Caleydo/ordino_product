@@ -44,6 +44,11 @@
         "name": "phovea_d3",
         "repo": "phovea/phovea_d3",
         "branch": "develop"
+      },
+      {
+        "name": "phovea_ui",
+        "repo": "phovea/phovea_ui",
+        "branch": "develop"
       }
     ]
   },
