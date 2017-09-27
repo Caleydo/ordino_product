@@ -32,17 +32,17 @@
       },
       {
         "name": "phovea_clue",
-        "repo": "Caleydo/phovea_clue",
+        "repo": "phovea/phovea_clue",
         "branch": "develop"
       },
       {
         "name": "phovea_core",
-        "repo": "Caleydo/phovea_core",
+        "repo": "phovea/phovea_core",
         "branch": "develop"
       },
       {
         "name": "phovea_d3",
-        "repo": "Caleydo/phovea_d3",
+        "repo": "phovea/phovea_d3",
         "branch": "develop"
       }
     ]
