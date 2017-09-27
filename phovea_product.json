@@ -5,50 +5,45 @@
     "repo": "Caleydo/ordino_public",
     "branch": "develop",
     "additional": [
-	  {
+      {
         "name": "ordino",
         "repo": "Caleydo/ordino",
-        "branch": "thinkh/provenance_retrieval"
+        "branch": "develop"
       },
       {
-        "name": "targid_common",
-        "repo": "Caleydo/targid_common",
-        "branch": "thinkh/provenance_retrieval"
+        "name": "tdp_core",
+        "repo": "datavisyn/tdp_core",
+        "branch": "develop"
       },
       {
-        "name": "targid_genehopper",
-        "repo": "Caleydo/targid_genehopper",
-        "branch": "thinkh/provenance_retrieval"
+        "name": "tdp_gene",
+        "repo": "Caleydo/tdp_gene",
+        "branch": "develop"
       },
       {
-        "name": "targid_boehringer",
-        "repo": "Caleydo/targid_boehringer",
-        "branch": "thinkh/provenance_retrieval"
+        "name": "tdp_publicdb",
+        "repo": "Caleydo/tdp_publicdb",
+        "branch": "develop"
       },
       {
-        "name": "ordino_uploaded_data",
-        "repo": "Caleydo/ordino_uploaded_data",
+        "name": "tdp_uploaded_data",
+        "repo": "datavisyn/tdp_uploaded_data",
+        "branch": "develop"
+      },
+      {
+        "name": "phovea_clue",
+        "repo": "Caleydo/phovea_clue",
         "branch": "develop"
       },
       {
         "name": "phovea_core",
-        "repo": "phovea/phovea_core",
-        "branch": "thinkh/provenance_retrieval"
-      },
-      {
-        "name": "phovea_clue",
-        "repo": "phovea/phovea_clue",
-        "branch": "thinkh/provenance_retrieval"
+        "repo": "Caleydo/phovea_core",
+        "branch": "develop"
       },
       {
         "name": "phovea_d3",
-        "repo": "phovea/phovea_d3",
-        "branch": "thinkh/provenance_retrieval"
-      },
-      {
-        "name": "phovea_ui",
-        "repo": "phovea/phovea_ui",
-        "branch": "thinkh/provenance_retrieval"
+        "repo": "Caleydo/phovea_d3",
+        "branch": "develop"
       }
     ]
   },
@@ -61,7 +56,7 @@
       {
         "name": "phovea_security_flask",
         "repo": "phovea/phovea_security_flask",
-        "branch": "thinkh/provenance_retrieval"
+        "branch": "develop"
       },
       {
         "name": "phovea_data_redis",
@@ -74,14 +69,19 @@
         "branch": "develop"
       },
       {
-        "name": "phovea_clue",
-        "repo": "phovea/phovea_clue",
-        "branch": "thinkh/provenance_retrieval"
+        "name": "phovea_core",
+        "repo": "phovea/phovea_core",
+        "branch": "develop"
       },
       {
-        "name": "ordino",
-        "repo": "Caleydo/ordino",
-        "branch": "thinkh/provenance_retrieval"
+        "name": "phovea_clue",
+        "repo": "phovea/phovea_clue",
+        "branch": "develop"
+      },
+      {
+        "name": "tdp_core",
+        "repo": "datavisyn/tdp_core",
+        "branch": "develop"
       },
       {
         "name": "ordino_public",
@@ -89,19 +89,14 @@
         "branch": "develop"
       },
       {
-        "name": "targid_boehringer",
-        "repo": "Caleydo/targid_boehringer",
-        "branch": "thinkh/provenance_retrieval"
-      },
-      {
-        "name": "ordino_uploaded_data",
-        "repo": "Caleydo/ordino_uploaded_data",
+        "name": "tdp_publicdb",
+        "repo": "Caleydo/tdp_publicdb",
         "branch": "develop"
       },
       {
-        "name": "targid_genehopper",
-        "repo": "Caleydo/targid_genehopper",
-        "branch": "thinkh/provenance_retrieval"
+        "name": "tdp_uploaded_data",
+        "repo": "datavisyn/tdp_uploaded_data",
+        "branch": "develop"
       }
     ]
   }
