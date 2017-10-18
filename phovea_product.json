@@ -74,16 +74,6 @@
         "branch": "develop"
       },
       {
-        "name": "phovea_core",
-        "repo": "phovea/phovea_core",
-        "branch": "thinkh/provenance_retrieval"
-      },
-      {
-        "name": "phovea_clue",
-        "repo": "phovea/phovea_clue",
-        "branch": "thinkh/provenance_retrieval"
-      },
-      {
         "name": "tdp_core",
         "repo": "datavisyn/tdp_core",
         "branch": "thinkh/provenance_retrieval"
