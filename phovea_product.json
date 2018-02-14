@@ -3,22 +3,22 @@
     "type": "web",
     "label": "ordino",
     "repo": "Caleydo/ordino_public",
-    "branch": "v3.1.0",
+    "branch": "v4.0.0",
     "additional": [
       {
         "name": "tdp_gene",
         "repo": "Caleydo/tdp_gene",
-        "branch": "v3.1.0"
+        "branch": "v4.0.0"
       },
       {
         "name": "tdp_publicdb",
         "repo": "Caleydo/tdp_publicdb",
-        "branch": "v3.1.0"
+        "branch": "v4.0.0"
       },
       {
         "name": "tdp_uploaded_data",
         "repo": "datavisyn/tdp_uploaded_data",
-        "branch": "v3.1.0"
+        "branch": "v4.0.0"
       }
     ]
   },
@@ -51,22 +51,22 @@
       {
         "name": "tdp_core",
         "repo": "datavisyn/tdp_core",
-        "branch": "v3.1.0"
+        "branch": "v4.0.0"
       },
       {
         "name": "ordino_public",
         "repo": "Caleydo/ordino_public",
-        "branch": "v3.1.0"
+        "branch": "v4.0.0"
       },
       {
         "name": "tdp_publicdb",
         "repo": "Caleydo/tdp_publicdb",
-        "branch": "v3.1.0"
+        "branch": "v4.0.0"
       },
       {
         "name": "tdp_uploaded_data",
         "repo": "datavisyn/tdp_uploaded_data",
-        "branch": "v3.1.0"
+        "branch": "v4.0.0"
       }
     ]
   }
