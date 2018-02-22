@@ -31,6 +31,11 @@
         "branch": "develop"
       },
       {
+        "name": "phovea_security_store_generated",
+        "repo": "datavisyn/phovea_security_store_generated",
+        "branch": "master"
+      },
+      {
         "name": "phovea_clue",
         "repo": "phovea/phovea_clue",
         "branch": "thinkh/provenance_retrieval"
@@ -59,6 +64,11 @@
     "branch": "develop",
     "additional": [
       {
+        "name": "phovea_security_store_generated",
+        "repo": "datavisyn/phovea_security_store_generated",
+        "branch": "master"
+      },
+      {
         "name": "phovea_security_flask",
         "repo": "phovea/phovea_security_flask",
         "branch": "develop"
@@ -74,14 +84,14 @@
         "branch": "develop"
       },
       {
-        "name": "tdp_core",
-        "repo": "datavisyn/tdp_core",
+        "name": "phovea_clue",
+        "repo": "phovea/phovea_clue",
         "branch": "thinkh/provenance_retrieval"
       },
       {
-        "name": "ordino_public",
-        "repo": "Caleydo/ordino_public",
-        "branch": "develop"
+        "name": "tdp_core",
+        "repo": "datavisyn/tdp_core",
+        "branch": "thinkh/provenance_retrieval"
       },
       {
         "name": "tdp_publicdb",
