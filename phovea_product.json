@@ -19,7 +19,12 @@
         "name": "tdp_uploaded_data",
         "repo": "datavisyn/tdp_uploaded_data",
         "branch": "v4.0.1"
-      }
+      },
+      {
+        "name": "phovea_security_store_generated",
+        "repo": "datavisyn/phovea_security_store_generated",
+        "branch": "master"
+      },
     ]
   },
   {
@@ -54,9 +59,9 @@
         "branch": "v4.0.1"
       },
       {
-        "name": "ordino_public",
-        "repo": "Caleydo/ordino_public",
-        "branch": "v4.0.1"
+        "name": "phovea_security_store_generated",
+        "repo": "datavisyn/phovea_security_store_generated",
+        "branch": "master"
       },
       {
         "name": "tdp_publicdb",
