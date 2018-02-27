@@ -16,11 +16,6 @@
         "branch": "develop"
       },
       {
-        "name": "tdp_uploaded_data",
-        "repo": "datavisyn/tdp_uploaded_data",
-        "branch": "develop"
-      },
-      {
         "name": "phovea_security_store_generated",
         "repo": "datavisyn/phovea_security_store_generated",
         "branch": "master"
@@ -66,11 +61,6 @@
       {
         "name": "tdp_publicdb",
         "repo": "Caleydo/tdp_publicdb",
-        "branch": "develop"
-      },
-      {
-        "name": "tdp_uploaded_data",
-        "repo": "datavisyn/tdp_uploaded_data",
         "branch": "develop"
       }
     ]
