@@ -3,7 +3,7 @@
     "type": "web",
     "label": "ordino",
     "repo": "Caleydo/ordino_public",
-    "branch": "develop",
+    "branch": "thinkh/update-typescript-dependency",
     "additional": [
       {
         "name": "tdp_gene",
