@@ -1,6 +1,6 @@
 [{
   "type": "web",
-  "label": "web",
+  "label": "ordino",
   "repo": "Caleydo/ordino_public",
   "branch": "v5.0.0",
   "additional": [
@@ -60,7 +60,7 @@
 },
 {
   "type": "api",
-  "label": "server",
+  "label": "ordino_server",
   "repo": "phovea/phovea_server",
   "branch": "v2.1.0",
   "additional": [{
