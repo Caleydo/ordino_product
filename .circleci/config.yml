@@ -3,8 +3,7 @@ jobs:
   build:
     working_directory: ~/phovea
     docker:
-      - image: caleydo/phovea_circleci_python:v1.0
-      - image: docker:17.05.0-ce-git
+      - image: caleydo/phovea_circleci_python:v2.0
     steps:
       - checkout
       - setup_remote_docker
@@ -56,7 +55,7 @@ jobs:
               ;;
             esac
             echo "using tag: --${awsTag}--"
-            node build.js --skipSaveImage --skipTests --noDefaultTags --pushExtra=${awsTag} --pushTo=922145058410.dkr.ecr.eu-central-1.amazonaws.com/caleydo
+            node build.js --serial --skipSaveImage --skipTests --noDefaultTags --pushExtra=${awsTag} --pushTo=922145058410.dkr.ecr.eu-central-1.amazonaws.com/caleydo
       - store_artifacts:
           path: build
           prefix: build
@@ -89,3 +88,31 @@ jobs:
               fi
               aws --output text ecs run-task --cluster caleydo --task-definition ${awsFamily} --started-by CircleCIAutoUpdate
             fi
+
+workflows:
+  version: 2
+#  build-nightly:
+#    triggers:
+#      - schedule: # nightly build during weekday
+#          cron: "15 1 * * 1-5"
+#          filters:
+#            branches:
+#              only:
+#                - develop
+#    jobs:
+#      - build
+  build-branch:
+    jobs:
+      - build:
+          filters:
+            tags:
+              ignore: /^v.*/
+  build-tag:
+    jobs:
+      - build:
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /^v.*/
+
