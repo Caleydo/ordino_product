@@ -28,7 +28,7 @@
     {
       "name": "tdp_core",
       "repo": "datavisyn/tdp_core",
-      "branch": "v5.0.2"
+      "branch": "v5.0.3"
     },
     {
       "name": "ordino",
@@ -44,7 +44,7 @@
     {
       "name": "tdp_publicdb",
       "repo": "Caleydo/tdp_publicdb",
-      "branch": "v5.0.0"
+      "branch": "v5.0.1"
     },
     {
       "name": "tdp_uploaded_data",
@@ -87,12 +87,12 @@
     {
       "name": "tdp_core",
       "repo": "datavisyn/tdp_core",
-      "branch": "v5.0.2"
+      "branch": "v5.0.3"
     },
     {
       "name": "tdp_publicdb",
       "repo": "Caleydo/tdp_publicdb",
-      "branch": "v5.0.0"
+      "branch": "v5.0.1"
     },
     {
       "name": "tdp_uploaded_data",
