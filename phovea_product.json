@@ -28,7 +28,7 @@
     {
       "name": "tdp_core",
       "repo": "datavisyn/tdp_core",
-      "branch": "v5.0.2"
+      "branch": "v5.0.3"
     },
     {
       "name": "ordino",
@@ -87,7 +87,7 @@
     {
       "name": "tdp_core",
       "repo": "datavisyn/tdp_core",
-      "branch": "v5.0.2"
+      "branch": "v5.0.3"
     },
     {
       "name": "tdp_publicdb",
