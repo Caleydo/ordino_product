@@ -2,11 +2,10 @@
   "name": "ordino_product",
   "description": "",
   "homepage": "https://phovea.caleydo.org",
-  "version": "5.0.0",
+  "version": "5.0.2",
   "author": {
     "name": "Samuel Gratzl",
-    "email": "samuel_gratzl@gmx.at",
-    "url": ""
+    "email": "sam@sgratzl.com"
   },
   "license": "BSD-3-Clause",
   "bugs": {
