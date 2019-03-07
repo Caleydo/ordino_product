@@ -64,6 +64,11 @@
   "repo": "phovea/phovea_server",
   "branch": "develop",
   "additional": [{
+      "name": "ordino_public",
+      "repo": "Caleydo/ordino_public",
+      "branch": "develop"
+    },
+    {
       "name": "phovea_security_flask",
       "repo": "phovea/phovea_security_flask",
       "branch": "develop"
