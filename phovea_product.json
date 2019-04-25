@@ -2,7 +2,7 @@
     "type": "web",
     "label": "ordino",
     "repo": "Caleydo/ordino_public",
-    "branch": "v5.0.2",
+    "branch": "v5.1.0",
     "additional": [{
         "name": "phovea_core",
         "repo": "phovea/phovea_core",
