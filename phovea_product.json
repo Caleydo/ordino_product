@@ -1,84 +1,84 @@
 [{
-  "type": "web",
-  "label": "web",
-  "repo": "Caleydo/ordino_public",
-  "branch": "v5.0.1",
-  "additional": [
-    {
-      "name": "phovea_core",
-      "repo": "phovea/phovea_core",
-      "branch": "v2.1.1"
-    },
-    {
-      "name": "phovea_ui",
-      "repo": "phovea/phovea_ui",
-      "branch": "v2.1.0"
-    },
-    {
-      "name": "phovea_clue",
-      "repo": "phovea/phovea_clue",
-      "branch": "v2.1.0"
-    },
-    {
-      "name": "phovea_security_flask",
-      "repo": "phovea/phovea_security_flask",
-      "branch": "v2.1.0"
-    },
+    "type": "web",
+    "label": "ordino",
+    "repo": "Caleydo/ordino_public",
+    "branch": "v5.1.0",
+    "additional": [{
+        "name": "phovea_core",
+        "repo": "phovea/phovea_core",
+        "branch": "v2.1.2"
+      },
+      {
+        "name": "phovea_ui",
+        "repo": "phovea/phovea_ui",
+        "branch": "v2.1.1"
+      },
+      {
+        "name": "phovea_clue",
+        "repo": "phovea/phovea_clue",
+        "branch": "v2.1.1"
+      },
+      {
+        "name": "phovea_security_flask",
+        "repo": "phovea/phovea_security_flask",
+        "branch": "v2.1.2"
+      },
 
-    {
-      "name": "tdp_core",
-      "repo": "datavisyn/tdp_core",
-      "branch": "v5.0.3"
-    },
-    {
-      "name": "ordino",
-      "repo": "Caleydo/ordino",
-      "branch": "v5.0.0"
-    },
+      {
+        "name": "tdp_core",
+        "repo": "datavisyn/tdp_core",
+        "branch": "v5.1.1"
+      },
+      {
+        "name": "ordino",
+        "repo": "Caleydo/ordino",
+        "branch": "v5.0.1"
+      },
 
-    {
-      "name": "tdp_dummy",
-      "repo": "Caleydo/tdp_dummy",
-      "branch": "v5.0.0"
-    }
-  ]
-},
-{
-  "type": "api",
-  "label": "server",
-  "repo": "phovea/phovea_server",
-  "branch": "v2.1.0",
-  "additional": [{
-      "name": "phovea_security_flask",
-      "repo": "phovea/phovea_security_flask",
-      "branch": "v2.1.0"
-    },
-    {
-      "name": "phovea_data_redis",
-      "repo": "phovea/phovea_data_redis",
-      "branch": "v2.1.0"
-    },
-    {
-      "name": "phovea_data_mongo",
-      "repo": "phovea/phovea_data_mongo",
-      "branch": "v2.1.0"
-    },
-    {
-      "name": "phovea_clue",
-      "repo": "phovea/phovea_clue",
-      "branch": "v2.1.0"
-    },
+      {
+        "name": "tdp_dummy",
+        "repo": "Caleydo/tdp_dummy",
+        "branch": "v5.0.0"
+      }
+    ]
+  },
+  {
+    "type": "api",
+    "label": "ordino_server",
+    "repo": "phovea/phovea_server",
+    "branch": "v2.2.0",
+    "additional": [
+      {
+        "name": "phovea_security_flask",
+        "repo": "phovea/phovea_security_flask",
+        "branch": "v2.1.2"
+      },
+      {
+        "name": "phovea_data_redis",
+        "repo": "phovea/phovea_data_redis",
+        "branch": "v2.2.0"
+      },
+      {
+        "name": "phovea_data_mongo",
+        "repo": "phovea/phovea_data_mongo",
+        "branch": "v2.1.0"
+      },
+      {
+        "name": "phovea_clue",
+        "repo": "phovea/phovea_clue",
+        "branch": "v2.1.1"
+      },
 
-    {
-      "name": "tdp_core",
-      "repo": "datavisyn/tdp_core",
-      "branch": "v5.0.3"
-    },
-    {
-      "name": "tdp_dummy",
-      "repo": "Caleydo/tdp_dummy",
-      "branch": "v5.0.0"
-    }
-  ]
-}
+      {
+        "name": "tdp_core",
+        "repo": "datavisyn/tdp_core",
+        "branch": "v5.1.1"
+      },
+      {
+        "name": "tdp_dummy",
+        "repo": "Caleydo/tdp_dummy",
+        "branch": "v5.0.0"
+      }
+    ]
+  }
 ]
