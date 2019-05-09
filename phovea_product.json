@@ -47,7 +47,11 @@
     "label": "ordino_server",
     "repo": "phovea/phovea_server",
     "branch": "v2.2.0",
-    "additional": [
+    "additional": [{
+        "name": "ordino_public",
+        "repo": "Caleydo/ordino_public",
+        "branch": "v5.1.0"
+      },
       {
         "name": "phovea_security_flask",
         "repo": "phovea/phovea_security_flask",
