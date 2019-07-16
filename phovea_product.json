@@ -35,7 +35,6 @@
       "repo": "Caleydo/ordino",
       "branch": "develop"
     },
-
     {
       "name": "tdp_gene",
       "repo": "Caleydo/tdp_gene",
@@ -54,6 +53,11 @@
     {
       "name": "phovea_security_store_generated",
       "repo": "datavisyn/phovea_security_store_generated",
+      "branch": "develop"
+    },
+    {
+      "name": "tdp_matomo",
+      "repo": "datavisyn/tdp_matomo",
       "branch": "develop"
     }
   ]
@@ -88,7 +92,6 @@
       "repo": "phovea/phovea_clue",
       "branch": "develop"
     },
-
     {
       "name": "tdp_core",
       "repo": "datavisyn/tdp_core",
@@ -104,10 +107,14 @@
       "repo": "datavisyn/tdp_uploaded_data",
       "branch": "develop"
     },
-
     {
       "name": "phovea_security_store_generated",
       "repo": "datavisyn/phovea_security_store_generated",
+      "branch": "develop"
+    },
+    {
+      "name": "tdp_matomo",
+      "repo": "datavisyn/tdp_matomo",
       "branch": "develop"
     }
   ]
