@@ -360,7 +360,7 @@ function postBuild(p, dir, buildInSubDir) {
     .then(mergeCompose);
 }
 
-function buildWebApp(p, dir) {
+function buildWebApp(p, dir, yoWorkspaceOptions) {
   console.log(dir, chalk.blue('building web application:'), p.label);
   const name = p.name;
   const hasAdditional = p.additional.length > 0;
@@ -368,7 +368,7 @@ function buildWebApp(p, dir) {
   // let act = Promise.resolve(null);
   if (hasAdditional) {
     act = act
-      .then(() => yo('workspace', {noAdditionals: true, defaultApp: 'targid_boehringer'}, dir))
+      .then(() => yo('workspace', yoWorkspaceOptions, dir))
       .then(() => npm(dir, 'install'));
     // test all modules
     if (hasAdditional && !argv.skipTests) {
@@ -386,13 +386,13 @@ function buildWebApp(p, dir) {
     .then(postBuild.bind(null, p, dir, true));
 }
 
-function buildServerApp(p, dir) {
+function buildServerApp(p, dir, yoWorkspaceOptions) {
   console.log(dir, chalk.blue('building service package:'), p.label);
   const name = p.name;
 
   let act = preBuild(p, dir);
   act = act
-    .then(() => yo('workspace', {noAdditionals: true, defaultApp: 'targid_boehringer'}, dir));
+    .then(() => yo('workspace', yoWorkspaceOptions, dir));
 
   if (!argv.skipTests) {
     act = act
@@ -423,15 +423,23 @@ function buildServerApp(p, dir) {
 }
 
 function buildImpl(d, dir) {
+  const yoWorkspaceOptions = {
+    noAdditionals: true,
+    defaultApp: 'ordino_public',
+    wsName: pkg.name,
+    wsDescription: pkg.description,
+    wsVersion: pkg.version
+  };
+
   switch (d.type) {
     case 'static':
     case 'web':
-      return buildWebApp(d, dir);
+      return buildWebApp(d, dir, yoWorkspaceOptions);
     case 'api':
       d.name = d.name || 'phovea_server';
-      return buildServerApp(d, dir);
+      return buildServerApp(d, dir, yoWorkspaceOptions);
     case 'service':
-      return buildServerApp(d, dir);
+      return buildServerApp(d, dir, yoWorkspaceOptions);
     default:
       console.error(chalk.red('unknown product type: ' + d.type));
       return Promise.resolve(null);
