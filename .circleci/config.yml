@@ -79,14 +79,14 @@ jobs:
             tasksExists=$(aws --output text ecs list-task-definitions --family-prefix ${awsFamily})
             echo "existsTaskDefinition? --${tasksExists}--"
             if [ ! -z "$tasksExists" ]; then
-              isTaskRunning=$(aws --output text ecs list-tasks --cluster caleydo --family ${awsFamily})
+              isTaskRunning=$(aws --output text ecs list-tasks --cluster ordino_public --family ${awsFamily})
               echo "isTaskRunning? --${isTaskRunning}--"
               if [ ! -z "$isTaskRunning" ]; then
                 taskId=$(echo "${isTaskRunning}" | cut -f2)
                 echo "taskId--${taskId}--"
-                aws --output text ecs stop-task --cluster caleydo --task ${taskId}
+                aws --output text ecs stop-task --cluster ordino_public --task ${taskId}
               fi
-              aws --output text ecs run-task --cluster caleydo --task-definition ${awsFamily} --started-by CircleCIAutoUpdate
+              aws --output text ecs run-task --cluster ordino_public --task-definition ${awsFamily} --started-by CircleCIAutoUpdate
             fi
 
 workflows:
