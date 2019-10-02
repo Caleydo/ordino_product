@@ -2,7 +2,7 @@
   "type": "web",
   "label": "ordino",
   "repo": "Caleydo/ordino_public",
-  "branch": "thinkh/use-workspace-for-phoveaMetaData.json",
+  "branch": "develop",
   "additional": [
     {
       "name": "phovea_core",
