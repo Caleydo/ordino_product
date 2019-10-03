@@ -1,11 +1,13 @@
 {
   "name": "ordino_product",
-  "description": "",
+  "displayName": "Ordino",
+  "description": "Analysis tool for cancer genomics to flexibly rank, filter and explore genes, cell lines and tissue samples.",
   "homepage": "https://phovea.caleydo.org",
   "version": "6.0.0",
   "author": {
-    "name": "Samuel Gratzl",
-    "email": "sam@sgratzl.com"
+    "name": "datavisyn",
+    "email": "contact@datavisyn.io",
+    "url": "http://datavisyn.io"
   },
   "license": "BSD-3-Clause",
   "bugs": {
