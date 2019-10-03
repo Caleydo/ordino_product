@@ -1,6 +1,5 @@
 {
   "name": "ordino_product",
-  "displayName": "Ordino",
   "description": "Analysis tool for cancer genomics to flexibly rank, filter and explore genes, cell lines and tissue samples.",
   "homepage": "https://phovea.caleydo.org",
   "version": "6.0.0",
