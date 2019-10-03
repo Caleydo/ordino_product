@@ -1,4 +1,4 @@
-ordino_product [![Phovea][phovea-image]][phovea-url] [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+ordino_product [![Phovea][phovea-image]][phovea-url] [![CircleCI](https://circleci.com/gh/Caleydo/ordino_product.svg?style=svg)](https://circleci.com/gh/Caleydo/ordino_product) [![Dependency Status][daviddm-image]][daviddm-url]
 =====================
 
 
