@@ -1,118 +1,116 @@
 [{
-  "type": "web",
-  "label": "ordino",
-  "repo": "Caleydo/ordino_public",
-  "branch": "develop",
-  "additional": [
-    {
-      "name": "phovea_core",
-      "repo": "phovea/phovea_core",
-      "branch": "develop"
-    },
-    {
-      "name": "phovea_ui",
-      "repo": "phovea/phovea_ui",
-      "branch": "develop"
-    },
-    {
-      "name": "phovea_clue",
-      "repo": "phovea/phovea_clue",
-      "branch": "python_3.7"
-    },
-    {
-      "name": "phovea_security_flask",
-      "repo": "phovea/phovea_security_flask",
-      "branch": "python_3.7"
-    },
+    "type": "web",
+    "label": "ordino",
+    "repo": "Caleydo/ordino_public",
+    "branch": "develop",
+    "additional": [{
+        "name": "phovea_core",
+        "repo": "phovea/phovea_core",
+        "branch": "develop"
+      },
+      {
+        "name": "phovea_ui",
+        "repo": "phovea/phovea_ui",
+        "branch": "develop"
+      },
+      {
+        "name": "phovea_clue",
+        "repo": "phovea/phovea_clue",
+        "branch": "python_3.7"
+      },
+      {
+        "name": "phovea_security_flask",
+        "repo": "phovea/phovea_security_flask",
+        "branch": "python_3.7"
+      },
 
-    {
-      "name": "tdp_core",
-      "repo": "datavisyn/tdp_core",
-      "branch": "python_3.7"
-    },
-    {
-      "name": "ordino",
-      "repo": "Caleydo/ordino",
-      "branch": "develop"
-    },
-    {
-      "name": "tdp_gene",
-      "repo": "Caleydo/tdp_gene",
-      "branch": "develop"
-    },
-    {
-      "name": "tdp_publicdb",
-      "repo": "Caleydo/tdp_publicdb",
-      "branch": "python_3.7"
-    },
-    {
-      "name": "tdp_uploaded_data",
-      "repo": "datavisyn/tdp_uploaded_data",
-      "branch": "python_3.7"
-    },
-    {
-      "name": "phovea_security_store_generated",
-      "repo": "datavisyn/phovea_security_store_generated",
-      "branch": "python_3.7"
-    },
-    {
-      "name": "tdp_matomo",
-      "repo": "datavisyn/tdp_matomo",
-      "branch": "python_3.7"
-    }
-  ]
-},
-{
-  "type": "api",
-  "label": "ordino_server",
-  "repo": "phovea/phovea_server",
-  "branch": "python_3.7",
-  "additional": [
-    {
-      "name": "phovea_security_flask",
-      "repo": "phovea/phovea_security_flask",
-      "branch": "python_3.7"
-    },
-    {
-      "name": "phovea_data_redis",
-      "repo": "phovea/phovea_data_redis",
-      "branch": "python_3.7"
-    },
-    {
-      "name": "phovea_data_mongo",
-      "repo": "phovea/phovea_data_mongo",
-      "branch": "python_3.7"
-    },
-    {
-      "name": "phovea_clue",
-      "repo": "phovea/phovea_clue",
-      "branch": "python_3.7"
-    },
-    {
-      "name": "tdp_core",
-      "repo": "datavisyn/tdp_core",
-      "branch": "python_3.7"
-    },
-    {
-      "name": "tdp_publicdb",
-      "repo": "Caleydo/tdp_publicdb",
-      "branch": "python_3.7"
-    },
-    {
-      "name": "tdp_uploaded_data",
-      "repo": "datavisyn/tdp_uploaded_data",
-      "branch": "python_3.7"
-    },
-    {
-      "name": "phovea_security_store_generated",
-      "repo": "datavisyn/phovea_security_store_generated",
-      "branch": "python_3.7"
-    },
-    {
-      "name": "tdp_matomo",
-      "repo": "datavisyn/tdp_matomo",
-      "branch": "python_3.7"
-    }
-  ]
-}
+      {
+        "name": "tdp_core",
+        "repo": "datavisyn/tdp_core",
+        "branch": "python_3.7"
+      },
+      {
+        "name": "ordino",
+        "repo": "Caleydo/ordino",
+        "branch": "develop"
+      },
+      {
+        "name": "tdp_gene",
+        "repo": "Caleydo/tdp_gene",
+        "branch": "develop"
+      },
+      {
+        "name": "tdp_publicdb",
+        "repo": "Caleydo/tdp_publicdb",
+        "branch": "python_3.7"
+      },
+      {
+        "name": "tdp_uploaded_data",
+        "repo": "datavisyn/tdp_uploaded_data",
+        "branch": "python_3.7"
+      },
+      {
+        "name": "phovea_security_store_generated",
+        "repo": "datavisyn/phovea_security_store_generated",
+        "branch": "python_3.7"
+      },
+      {
+        "name": "tdp_matomo",
+        "repo": "datavisyn/tdp_matomo",
+        "branch": "python_3.7"
+      }
+    ]
+  },
+  {
+    "type": "api",
+    "label": "ordino_server",
+    "repo": "phovea/phovea_server",
+    "branch": "python_3.7",
+    "additional": [{
+        "name": "phovea_security_flask",
+        "repo": "phovea/phovea_security_flask",
+        "branch": "python_3.7"
+      },
+      {
+        "name": "phovea_data_redis",
+        "repo": "phovea/phovea_data_redis",
+        "branch": "python_3.7"
+      },
+      {
+        "name": "phovea_data_mongo",
+        "repo": "phovea/phovea_data_mongo",
+        "branch": "python_3.7"
+      },
+      {
+        "name": "phovea_clue",
+        "repo": "phovea/phovea_clue",
+        "branch": "python_3.7"
+      },
+      {
+        "name": "tdp_core",
+        "repo": "datavisyn/tdp_core",
+        "branch": "python_3.7"
+      },
+      {
+        "name": "tdp_publicdb",
+        "repo": "Caleydo/tdp_publicdb",
+        "branch": "python_3.7"
+      },
+      {
+        "name": "tdp_uploaded_data",
+        "repo": "datavisyn/tdp_uploaded_data",
+        "branch": "python_3.7"
+      },
+      {
+        "name": "phovea_security_store_generated",
+        "repo": "datavisyn/phovea_security_store_generated",
+        "branch": "python_3.7"
+      },
+      {
+        "name": "tdp_matomo",
+        "repo": "datavisyn/tdp_matomo",
+        "branch": "python_3.7"
+      }
+    ]
+  }
 ]
