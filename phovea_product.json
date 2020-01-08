@@ -16,18 +16,18 @@
       {
         "name": "phovea_clue",
         "repo": "phovea/phovea_clue",
-        "branch": "python_3.7"
+        "branch": "develop"
       },
       {
         "name": "phovea_security_flask",
         "repo": "phovea/phovea_security_flask",
-        "branch": "python_3.7"
+        "branch": "develop"
       },
 
       {
         "name": "tdp_core",
         "repo": "datavisyn/tdp_core",
-        "branch": "python_3.7"
+        "branch": "develop"
       },
       {
         "name": "ordino",
@@ -42,22 +42,22 @@
       {
         "name": "tdp_publicdb",
         "repo": "Caleydo/tdp_publicdb",
-        "branch": "python_3.7"
+        "branch": "develop"
       },
       {
         "name": "tdp_uploaded_data",
         "repo": "datavisyn/tdp_uploaded_data",
-        "branch": "python_3.7"
+        "branch": "develop"
       },
       {
         "name": "phovea_security_store_generated",
         "repo": "datavisyn/phovea_security_store_generated",
-        "branch": "python_3.7"
+        "branch": "develop"
       },
       {
         "name": "tdp_matomo",
         "repo": "datavisyn/tdp_matomo",
-        "branch": "python_3.7"
+        "branch": "develop"
       }
     ]
   },
@@ -65,51 +65,51 @@
     "type": "api",
     "label": "ordino_server",
     "repo": "phovea/phovea_server",
-    "branch": "python_3.7",
+    "branch": "develop",
     "additional": [{
         "name": "phovea_security_flask",
         "repo": "phovea/phovea_security_flask",
-        "branch": "python_3.7"
+        "branch": "develop"
       },
       {
         "name": "phovea_data_redis",
         "repo": "phovea/phovea_data_redis",
-        "branch": "python_3.7"
+        "branch": "develop"
       },
       {
         "name": "phovea_data_mongo",
         "repo": "phovea/phovea_data_mongo",
-        "branch": "python_3.7"
+        "branch": "develop"
       },
       {
         "name": "phovea_clue",
         "repo": "phovea/phovea_clue",
-        "branch": "python_3.7"
+        "branch": "develop"
       },
       {
         "name": "tdp_core",
         "repo": "datavisyn/tdp_core",
-        "branch": "python_3.7"
+        "branch": "develop"
       },
       {
         "name": "tdp_publicdb",
         "repo": "Caleydo/tdp_publicdb",
-        "branch": "python_3.7"
+        "branch": "develop"
       },
       {
         "name": "tdp_uploaded_data",
         "repo": "datavisyn/tdp_uploaded_data",
-        "branch": "python_3.7"
+        "branch": "develop"
       },
       {
         "name": "phovea_security_store_generated",
         "repo": "datavisyn/phovea_security_store_generated",
-        "branch": "python_3.7"
+        "branch": "develop"
       },
       {
         "name": "tdp_matomo",
         "repo": "datavisyn/tdp_matomo",
-        "branch": "python_3.7"
+        "branch": "develop"
       }
     ]
   }
