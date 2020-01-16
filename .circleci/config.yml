@@ -12,6 +12,9 @@ jobs:
       - run:
           name: install-npm-wee
           command: npm install
+      - run:
+          name: Show installed npm dependencies
+          command: npm list --depth=1 || true
       - save_cache:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
