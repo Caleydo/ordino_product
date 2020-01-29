@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/phovea
     docker:
-      - image: caleydo/phovea_circleci_python:v2.0
+      - image: circleci/python:3.7-buster-node-browsers # for node version see Dockerfile on https://hub.docker.com/r/circleci/python
     steps:
       - checkout
       - setup_remote_docker
@@ -12,20 +12,23 @@ jobs:
       - run:
           name: install-npm-wee
           command: npm install
+      - run:
+          name: Show installed npm dependencies
+          command: npm list --depth=1 || true
       - save_cache:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
             - ./node_modules
       - restore_cache:
-          key: awscli-1.11.113
+          key: awscli-1.16.312
       - run:
           name: install-aws-cli
           command: |
             virtualenv ~/venv
             . ~/venv/bin/activate
-            pip install awscli==1.11.113
+            pip install awscli==1.16.312
       - save_cache:
-          key: awscli-1.11.113
+          key: awscli-1.16.312
           paths:
           - ~/venv
       - run:
@@ -51,14 +54,14 @@ jobs:
               awsTag="latest"
               ;;
             *)
-              awsTag="${CIRCLE_BRANCH}${CIRCLE_TAG}"
+              awsTag="${CIRCLE_BRANCH//\//_}${CIRCLE_TAG}" # replace `/` with `_` in branch name
               ;;
             esac
             echo "using tag: --${awsTag}--"
-            node build.js --serial --skipSaveImage --skipTests --noDefaultTags --pushExtra=${awsTag} --pushTo=922145058410.dkr.ecr.eu-central-1.amazonaws.com/caleydo
+            node build.js --skipSaveImage --skipTests --noDefaultTags --pushExtra=${awsTag} --pushTo=922145058410.dkr.ecr.eu-central-1.amazonaws.com/caleydo
       - store_artifacts:
           path: build
-          prefix: build
+          destination: build
       - deploy:
           name: cleanup untagged aws repo
           command: |
@@ -66,7 +69,7 @@ jobs:
             export AWS_DEFAULT_REGION=eu-central-1
             baseName=${CIRCLE_PROJECT_REPONAME%_product}
             # list repos filter to just the one of this product and delete untagged ones
-            aws ecr describe-repositories --output text | cut -f5 | grep "caleydo/${baseName}" | while read line; do aws ecr list-images --repository-name $line --filter tagStatus=UNTAGGED --query 'imageIds[*]' --output text | while read imageId; do aws ecr batch-delete-image --output text --repository-name $line --image-ids imageDigest=$imageId; done; done
+            aws ecr describe-repositories --output text | cut -f6 | grep "caleydo/${baseName}" | while read line; do aws ecr list-images --repository-name $line --filter tagStatus=UNTAGGED --query 'imageIds[*]' --output text | while read imageId; do aws ecr batch-delete-image --output text --repository-name $line --image-ids imageDigest=$imageId; done; done
       - deploy:
           name: restart aws #assumes the task definition is called <reponame>-<branch>
           command: |
@@ -74,7 +77,7 @@ jobs:
             export AWS_DEFAULT_REGION=eu-central-1
             # cleanup name by removing the _product suffix
             baseName=${CIRCLE_PROJECT_REPONAME%_product}
-            awsFamily="${baseName}-${CIRCLE_BRANCH}"
+            awsFamily="${baseName}-${CIRCLE_BRANCH//\//_}" # replace `/` with `_` in branch name
             echo "awsFamily --${awsFamily}--"
             tasksExists=$(aws --output text ecs list-task-definitions --family-prefix ${awsFamily})
             echo "existsTaskDefinition? --${tasksExists}--"
