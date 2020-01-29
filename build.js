@@ -636,7 +636,10 @@ function installWebDependencies(p) {
 }
 
 function showWebDependencies(p) {
-  return npm(p.additional.length > 0 ? p.tmpDir : (`${p.tmpDir}/${p.name}`), 'list --depth=1');
+  // `npm ls` fails if some peerDependencies are not installed
+  // since this function is for debug purposes only, we catch possible errors of `npm()` and resolve it with status code `0`.
+  return npm(p.additional.length > 0 ? p.tmpDir : (`${p.tmpDir}/${p.name}`), 'list --depth=1')
+    .catch(() => Promise.resolve(0)) // status code = 0
 }
 
 function cleanUpWebDependencies(p) {
@@ -677,7 +680,9 @@ function installPythonTestDependencies(p) {
 }
 
 function showPythonTestDependencies(p) {
-  return spawn('pip', 'list', {cwd: p.tmpDir});
+  // since this function is for debug purposes only, we catch possible errors and resolve it with status code `0`.
+  return spawn('pip', 'list', {cwd: p.tmpDir})
+    .catch(() => Promise.resolve(0)) // status code = 0
 }
 
 function buildServer(p) {
@@ -805,8 +810,8 @@ if (require.main === module) {
       }
     }
 
-    const needsWorskpace = (isWeb && hasAdditional) || isServer;
-    if(needsWorskpace) {
+    const needsWorkspace = (isWeb && hasAdditional) || isServer;
+    if(needsWorkspace) {
       steps[`prepare:${suffix}`] = () => catchProductBuild(p, createWorkspace(p));
     }
 
@@ -824,10 +829,9 @@ if (require.main === module) {
     steps[`image:${suffix}`] = () => catchProductBuild(p, buildDockerImage(p));
     steps[`save:${suffix}`] = () => catchProductBuild(p, dockerSave(p.image, `build/${p.label}_image.tar.gz`));
 
-    if(needsWorskpace) {
+    if(needsWorkspace) {
       subSteps.push(`prepare:${suffix}`);
     }
-
     subSteps.push(`install:${suffix}`);
     subSteps.push(`show:${suffix}`);
 
