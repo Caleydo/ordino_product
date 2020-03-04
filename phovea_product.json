@@ -27,7 +27,7 @@
       {
         "name": "tdp_core",
         "repo": "datavisyn/tdp_core",
-        "branch": "develop"
+        "branch": "ochampari/10_tourdino-lineup-panel-button"
       },
       {
         "name": "ordino",
@@ -57,6 +57,11 @@
       {
         "name": "tdp_matomo",
         "repo": "datavisyn/tdp_matomo",
+        "branch": "develop"
+      },
+      {
+        "name": "tourdino",
+        "repo": "Caleydo/tourdino",
         "branch": "develop"
       }
     ]
@@ -89,7 +94,7 @@
       {
         "name": "tdp_core",
         "repo": "datavisyn/tdp_core",
-        "branch": "develop"
+        "branch": "ochampari/10_tourdino-lineup-panel-button"
       },
       {
         "name": "tdp_publicdb",
