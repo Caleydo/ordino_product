@@ -27,7 +27,7 @@
       {
         "name": "tdp_core",
         "repo": "datavisyn/tdp_core",
-        "branch": "ochampari/10_tourdino-lineup-panel-button"
+        "branch": "develop"
       },
       {
         "name": "ordino",
@@ -94,7 +94,7 @@
       {
         "name": "tdp_core",
         "repo": "datavisyn/tdp_core",
-        "branch": "ochampari/10_tourdino-lineup-panel-button"
+        "branch": "develop"
       },
       {
         "name": "tdp_publicdb",
