@@ -3,43 +3,43 @@
     "type": "web",
     "label": "ordino",
     "repo": "Caleydo/ordino_public",
-    "branch": "v5.4.0",
+    "branch": "v7.0.0",
     "additional": [{
         "name": "phovea_core",
         "repo": "phovea/phovea_core",
-        "branch": "v2.2.0"
+        "branch": "v4.0.0"
       },
       {
         "name": "phovea_ui",
         "repo": "phovea/phovea_ui",
-        "branch": "v2.1.3"
+        "branch": "v4.0.0"
       },
       {
         "name": "phovea_clue",
         "repo": "phovea/phovea_clue",
-        "branch": "v2.3.0"
+        "branch": "v5.0.0"
       },
       {
         "name": "phovea_security_flask",
         "repo": "phovea/phovea_security_flask",
-        "branch": "v2.3.0"
+        "branch": "v5.0.0"
       },
 
       {
         "name": "tdp_core",
         "repo": "datavisyn/tdp_core",
-        "branch": "v5.5.0"
+        "branch": "v9.0.0"
       },
       {
         "name": "ordino",
         "repo": "Caleydo/ordino",
-        "branch": "v5.2.0"
+        "branch": "v7.0.0"
       },
 
       {
         "name": "tdp_dummy",
         "repo": "Caleydo/tdp_dummy",
-        "branch": "v5.0.0"
+        "branch": "v7.0.0"
       }
     ]
   },
@@ -47,38 +47,38 @@
     "type": "api",
     "label": "ordino_server",
     "repo": "phovea/phovea_server",
-    "branch": "v2.4.0",
+    "branch": "v5.0.0",
     "additional": [
       {
         "name": "phovea_security_flask",
         "repo": "phovea/phovea_security_flask",
-        "branch": "v2.3.0"
+        "branch": "v5.0.0"
       },
       {
         "name": "phovea_data_redis",
         "repo": "phovea/phovea_data_redis",
-        "branch": "v2.3.0"
+        "branch": "v5.0.0"
       },
       {
         "name": "phovea_data_mongo",
         "repo": "phovea/phovea_data_mongo",
-        "branch": "v2.2.0"
+        "branch": "v5.0.0"
       },
       {
         "name": "phovea_clue",
         "repo": "phovea/phovea_clue",
-        "branch": "v2.3.0"
+        "branch": "v5.0.0"
       },
 
       {
         "name": "tdp_core",
         "repo": "datavisyn/tdp_core",
-        "branch": "v5.5.0"
+        "branch": "v9.0.0"
       },
       {
         "name": "tdp_dummy",
         "repo": "Caleydo/tdp_dummy",
-        "branch": "v5.0.0"
+        "branch": "v7.0.0"
       }
     ]
   }
