@@ -35,6 +35,11 @@
         "repo": "Caleydo/ordino",
         "branch": "v7.0.0"
       },
+      {
+        "name": "tdp_uploaded_data",
+        "repo": "datavisyn/tdp_uploaded_data",
+        "branch": "v7.0.0"
+      },
 
       {
         "name": "tdp_dummy",
