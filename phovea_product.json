@@ -28,7 +28,7 @@
       {
         "name": "tdp_core",
         "repo": "datavisyn/tdp_core",
-        "branch": "v9.0.0"
+        "branch": "v9.1.0"
       },
       {
         "name": "ordino",
@@ -52,7 +52,7 @@
     "type": "api",
     "label": "ordino_server",
     "repo": "phovea/phovea_server",
-    "branch": "v5.0.0",
+    "branch": "v5.0.1",
     "additional": [
       {
         "name": "phovea_security_flask",
@@ -78,7 +78,7 @@
       {
         "name": "tdp_core",
         "repo": "datavisyn/tdp_core",
-        "branch": "v9.0.0"
+        "branch": "v9.1.0"
       },
       {
         "name": "tdp_dummy",
