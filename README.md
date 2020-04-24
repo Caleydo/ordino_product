@@ -38,7 +38,7 @@ This repository is part of **[Phovea](http://phovea.caleydo.org/)**, a platform 
 [phovea-url]: https://phovea.caleydo.org
 [npm-image]: https://badge.fury.io/js/ordino_product.svg
 [npm-url]: https://npmjs.org/package/ordino_product
-[travis-image]: https://travis-ci.org/Caleydo/ordino_product.svg?branch=master
-[travis-url]: https://travis-ci.org/Caleydo/ordino_product
+[circleci-image]: https://circleci.com/gh/Caleydo/ordino_product.svg?style=shield
+[circleci-url]: https://circleci.com/gh/Caleydo/ordino_product
 [daviddm-image]: https://david-dm.org/Caleydo/ordino_product/status.svg
 [daviddm-url]: https://david-dm.org/Caleydo/ordino_product
