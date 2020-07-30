@@ -639,7 +639,7 @@ function createWorkspace(p) {
 }
 
 function installWebDependencies(p) {
-  return npm(p.tmpDir, 'install');
+  return npm(p.tmpDir, 'install').then(() => console.log('install finished'));
 }
 
 function showWebDependencies(p) {

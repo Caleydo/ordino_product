@@ -3,6 +3,7 @@
 *.*
 /*/
 *
+package-lock.json
 
 # ... except all files relevant for the product build
 !/.circleci/
