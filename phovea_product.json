@@ -2,7 +2,7 @@
     "type": "web",
     "label": "ordino",
     "repo": "Caleydo/ordino_public",
-    "branch": "develop",
+    "branch": "vstoiber/move_deploy",
     "additional": [{
         "name": "phovea_core",
         "repo": "phovea/phovea_core",
