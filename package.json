@@ -19,7 +19,9 @@
   "scripts": {
     "build": "node build.js --skipTests",
     "predist": "npm run build",
-    "dist": "mkdir dist && cd build && tar cvzf ../dist/ordino_product.tar.gz *"
+    "dist": "mkdir dist && cd build && tar cvzf ../dist/ordino_product.tar.gz *",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
   },
   "dependencies": {
     "bluebird": "3.7.2",
@@ -30,5 +32,8 @@
     "yamljs": "0.3.0",
     "yargs-parser": "18.0.0",
     "yeoman-environment": "2.8.0"
+  },
+  "devDependencies": {
+    "cypress": "^4.12.1"
   }
 }

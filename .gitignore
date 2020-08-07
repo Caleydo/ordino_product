@@ -29,3 +29,10 @@ package-lock.json
 !Jenkinsfile
 !docker_script.sh
 !docker-compose-patch.*
+
+# Cypress
+!cypress.json
+!cypress/
+!cypress/**
+cypress/screenshots/*
+cypress/videos/*
