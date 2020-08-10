@@ -1,16 +1,16 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "ordino.fullname" . }}-web
+  name: {{ include "ordino.fullname" . }}-server
   labels:
     {{- include "ordino.labels" . | nindent 4 }}
 spec:
   type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.port }}
-      targetPort: http
+      targetPort: 9000
       protocol: TCP
       name: http
   selector:
     {{- include "ordino.selectorLabels" . | nindent 4 }}
-    ordino-part: web
+    ordino-part: server

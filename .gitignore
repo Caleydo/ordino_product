@@ -9,3 +9,4 @@ node_modules/
 *.css
 *.log
 /tmp*/
+/helm-charts/charts/

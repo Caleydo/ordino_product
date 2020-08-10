@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "ordino.fullname" . }}-web
+  name: {{ include "ordino.fullname" . }}-server
   labels:
     {{- include "ordino.labels" . | nindent 4 }}
 spec:
@@ -19,7 +19,7 @@ spec:
     {{- end }}
       labels:
         {{- include "ordino.selectorLabels" . | nindent 8 }}
-        ordino-part: web
+        ordino-part: server
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
@@ -29,14 +29,17 @@ spec:
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
-        - name: web
-          image: caleydo/ordino:starter
-          env:
-            - name: PHOVEA_API_SERVER
-              value: ordino-server
+        - name: server
+          image: caleydo/ordino_server:starter
           ports:
-            - name: http
-              containerPort: 80
+            - name: server
+              containerPort: 9000
+          volumeMounts:
+            - name: {{ include "ordino.fullname" . }}-configuration-volume
+              mountPath: /phovea.config
+          env:
+            - name: PHOVEA_CONFIG_PATH
+              value: /phovea.config/config.json
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}

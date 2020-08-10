@@ -12,17 +12,21 @@ data:
         "port": 9000,
       },
       "tdp_core": {
-        "host": "localhost"
+        "host": "{{ .Values.ordino.mongodb.host }}",
+        "port": {{ .Values.ordino.mongodb.port }},
+        "database": "targid"
       },
       "phovea_data_mongo": {
-        "host": "localhost"
+        "host": "@{{ .Values.ordino.mongodb.host }}",
+        "port": {{ .Values.ordino.mongodb.port }},
+        "db": "graph"
       },
       "phovea_data_redis": {
         "assigner": {
-          "hostname": "localhost"
+          "hostname": "{{ .Values.ordino.redis.host }}"
         },
         "mapping": {
-          "hostname": "localhost"
+          "hostname": "{{ .Values.ordino.redis.host }}"
         }
       },
       "tdp_publicdb": {

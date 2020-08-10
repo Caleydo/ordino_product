@@ -14,6 +14,27 @@ imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
 
+#Variables
+MongoDBName: &MongoDBName "ordinoDB"
+MongoDBUser: &MongoDBUser "ordinoAdmin"
+MongoDBPass: &MongoDBPass "ordinoAdmin"
+
+ordino:
+  redis:
+    # ordino.redis.host -- Name of the Redis host to be used
+    host: "redis-headless"
+  mongodb:
+    # ordino.mongodb.username -- MongoDB custom user (mandatory if auth.database is set)
+    username: *MongoDBUser
+    # ordino.mongodb.password -- MongoDB custom user password
+    password: *MongoDBPass
+    # ordino.mongodb.database -- MongoDB custom database
+    database: *MongoDBName
+    # ordino.mongodb.host -- MongoDB host
+    host: "mongodb"
+    # ordino.mongodb.port -- MongoDB port
+    port: "27017"
+
 serviceAccount:
   # Specifies whether a service account should be created
   create: true
@@ -77,3 +98,54 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+redis:
+  # Please see all available overrides at https://github.com/helm/charts/tree/master/stable/redis
+  # redis.enabled -- Flag to control whether to deploy Redis
+  enabled: true
+  # redis.fullnameOverride -- Name override for the redis deployment
+  fullnameOverride: "redis"
+  cluster:
+    # redis.cluster.enabled -- Cluster mode for Redis
+    enabled: false
+  master:
+    persistence:
+      # redis.master.persistence.enabled -- Enable redis volume claim
+      enabled: false
+      # redis.master.persistence.size -- Size of the volume claim
+      size: 1Gi
+  # redis.usePassword -- Use password for accessing redis
+  usePassword: false
+
+postgresql:
+  # postgresql.enabled -- Flag to control whether to deploy PostgreSQL
+  enabled: true
+  persistence:
+    # postgresql.persistence.size -- Size of the PostgreSQL pvc
+    size: 1Gi
+  # postgresql.fullnameOverride -- Name override for the PostgreSQL deployment
+  fullnameOverride: postgresql
+  # postgresql.pgPass -- Password for the master PostgreSQL user.
+  # Feeds into the `ordinopostgrescredentials` secret that is provided to the PostgreSQL chart
+  pgPass: pass
+  # postgresql.existingSecret -- Name of existing secret that holds passwords for PostgreSQL
+  existingSecret: ordinopostgrescredentials
+
+mongodb:
+  # mongodb.enabled -- Flag to control whether to deploy MongoDB
+  enabled: true
+  # mongodb.fullnameOverride -- Name override for the MongoDB deployment
+  fullnameOverride: mongodb
+  persistence:
+    enabled: true
+    # mongodb.persistence.size -- Size of the MongoDB pvc
+    size: 1Gi
+  auth:
+    # mongodb.auth.enabled -- Flag to control whether to enable authentication
+    enabled: false
+    # mongodb.auth.username -- MongoDB custom user (mandatory if auth.database is set)
+    username: *MongoDBUser
+    # mongodb.auth.password -- MongoDB custom user password
+    password: *MongoDBPass
+    # mongodb.auth.database -- MongoDB custom database
+    database: *MongoDBName
