@@ -57,7 +57,7 @@
       {
         "name": "tdp_matomo",
         "repo": "datavisyn/tdp_matomo",
-        "branch": "v4.0.0"
+        "branch": "v5.0.0"
       },
       {
         "name": "tourdino",
@@ -70,7 +70,7 @@
     "type": "api",
     "label": "ordino_server",
     "repo": "phovea/phovea_server",
-    "branch": "v5.0.0",
+    "branch": "v6.0.0",
     "additional": [{
         "name": "phovea_security_flask",
         "repo": "phovea/phovea_security_flask",
@@ -84,7 +84,7 @@
       {
         "name": "phovea_data_mongo",
         "repo": "phovea/phovea_data_mongo",
-        "branch": "v5.0.0"
+        "branch": "v6.0.0"
       },
       {
         "name": "phovea_clue",
@@ -114,7 +114,7 @@
       {
         "name": "tdp_matomo",
         "repo": "datavisyn/tdp_matomo",
-        "branch": "v4.0.0"
+        "branch": "v5.0.0"
       }
     ]
   }
