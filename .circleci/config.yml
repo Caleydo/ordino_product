@@ -8,7 +8,7 @@ jobs:
       - checkout
       - setup_remote_docker
       - restore_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
+          key: dependency2-cache-{{ checksum "package.json" }}
       - run:
           name: install-npm-wee
           command: npm install
@@ -16,7 +16,7 @@ jobs:
           name: Show installed npm dependencies
           command: npm list --depth=1 || true
       - save_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
+          key: dependency2-cache-{{ checksum "package.json" }}
           paths:
             - ./node_modules
       - restore_cache:
