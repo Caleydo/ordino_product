@@ -8,16 +8,16 @@ data:
   config.json: |-
     {
       "phovea_server": {
-        "debug": false,
-        "port": 9000,
+        "debug": {{ .Values.ordino.server.debug }},
+        "port": {{ .Values.ordino.server.port }},
       },
       "tdp_core": {
-        "host": "{{ .Values.ordino.mongodb.host }}",
+        "host": "mongodb://{{ .Values.ordino.mongodb.username }}:{{ .Values.ordino.mongodb.password }}@{{ .Values.ordino.mongodb.host }}/targid{{ .Values.ordino.mongodb.extraArgs }}",
         "port": {{ .Values.ordino.mongodb.port }},
         "database": "targid"
       },
       "phovea_data_mongo": {
-        "host": "@{{ .Values.ordino.mongodb.host }}",
+        "host": "mongodb://{{ .Values.ordino.mongodb.username }}:{{ .Values.ordino.mongodb.password }}@{{ .Values.ordino.mongodb.host }}/graph{{ .Values.ordino.mongodb.extraArgs }}",
         "port": {{ .Values.ordino.mongodb.port }},
         "db": "graph"
       },

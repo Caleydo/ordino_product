@@ -5,8 +5,8 @@
 replicaCount: 1
 
 image:
-  repository: nginx
-  pullPolicy: IfNotPresent
+  repository: caleydo
+  pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
 
@@ -20,6 +20,15 @@ MongoDBUser: &MongoDBUser "ordinoAdmin"
 MongoDBPass: &MongoDBPass "ordinoAdmin"
 
 ordino:
+  server:
+    image: caleydo/ordino_server
+    tag: starter
+    port: 9000
+    debug: true
+  web:
+    image: caleydo/ordino
+    tag: starter
+    port: 80
   redis:
     # ordino.redis.host -- Name of the Redis host to be used
     host: "redis-headless"
@@ -34,6 +43,8 @@ ordino:
     host: "mongodb"
     # ordino.mongodb.port -- MongoDB port
     port: "27017"
+    # ordino.mongodb.extraArgs -- Extra arguments for the mongo connection string. Must always start with '?' e.g. '?ssl=true&ssl_ca_certs=/mongodb-certs/cert.pem'
+    extraArgs: ""
 
 serviceAccount:
   # Specifies whether a service account should be created
@@ -111,7 +122,7 @@ redis:
   master:
     persistence:
       # redis.master.persistence.enabled -- Enable redis volume claim
-      enabled: false
+      enabled: true
       # redis.master.persistence.size -- Size of the volume claim
       size: 1Gi
   # redis.usePassword -- Use password for accessing redis
@@ -142,10 +153,22 @@ mongodb:
     size: 1Gi
   auth:
     # mongodb.auth.enabled -- Flag to control whether to enable authentication
-    enabled: false
+    enabled: true
     # mongodb.auth.username -- MongoDB custom user (mandatory if auth.database is set)
     username: *MongoDBUser
     # mongodb.auth.password -- MongoDB custom user password
     password: *MongoDBPass
     # mongodb.auth.database -- MongoDB custom database
     database: *MongoDBName
+    # mongodb.auth.rootPassword -- MongoDB admin password
+    rootPassword: *MongoDBPass
+  # mongodb.initdbScripts -- List of scripts to run on first deployment of the Mongo dependency
+  initdbScripts:
+    my_init_script.sh: |
+      #!/bin/bash
+      echo "Creating mongo user..."
+      mongo  -u root -p ordinoAdmin --authenticationDatabase admin targid --eval "db.createUser({user: 'ordinoAdmin', pwd: 'ordinoAdmin', roles: [{role: 'dbOwner', db: 'targid'}]});"
+      mongo  -u root -p ordinoAdmin --authenticationDatabase admin graph --eval "db.createUser({user: 'ordinoAdmin', pwd: 'ordinoAdmin', roles: [{role: 'dbOwner', db: 'graph'}]});"
+      echo "Mongo user created."
+
+      

@@ -30,10 +30,11 @@ spec:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
         - name: server
-          image: caleydo/ordino_server:starter
+          image: {{ .Values.ordino.server.image }}:{{ .Values.ordino.server.tag }}
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - name: server
-              containerPort: 9000
+              containerPort: {{ .Values.ordino.server.port }}
           volumeMounts:
             - name: {{ include "ordino.fullname" . }}-configuration-volume
               mountPath: /phovea.config

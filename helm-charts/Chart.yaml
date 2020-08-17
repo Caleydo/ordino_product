@@ -33,6 +33,6 @@ dependencies:
     repository: "https://charts.bitnami.com/bitnami"
     condition: mongodb.enabled
   - name: postgresql
-    version: "8.6.4"
+    version: 8.6.4
     repository: "https://kubernetes-charts.storage.googleapis.com/"
     condition: postgresql.enabled

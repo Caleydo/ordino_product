@@ -30,13 +30,14 @@ spec:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
         - name: web
-          image: caleydo/ordino:starter
+          image: {{ .Values.ordino.web.image }}:{{ .Values.ordino.web.tag }}
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
             - name: PHOVEA_API_SERVER
-              value: ordino-server
+              value: {{ include "ordino.fullname" . }}-server
           ports:
             - name: http
-              containerPort: 80
+              containerPort: {{ .Values.ordino.web.port }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
