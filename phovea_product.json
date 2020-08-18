@@ -1,9 +1,11 @@
-[{
+[
+  {
     "type": "web",
     "label": "ordino",
     "repo": "Caleydo/ordino_public",
     "branch": "develop",
-    "additional": [{
+    "additional": [
+      {
         "name": "phovea_core",
         "repo": "phovea/phovea_core",
         "branch": "develop"
@@ -23,7 +25,6 @@
         "repo": "phovea/phovea_security_flask",
         "branch": "develop"
       },
-
       {
         "name": "tdp_core",
         "repo": "datavisyn/tdp_core",
@@ -71,7 +72,8 @@
     "label": "ordino_server",
     "repo": "phovea/phovea_server",
     "branch": "develop",
-    "additional": [{
+    "additional": [
+      {
         "name": "phovea_security_flask",
         "repo": "phovea/phovea_security_flask",
         "branch": "develop"
