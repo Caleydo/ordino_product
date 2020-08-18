@@ -8,7 +8,7 @@ jobs:
       - checkout
       - setup_remote_docker
       - restore_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
+          key: dependency2-cache-{{ checksum "package.json" }}
       - run:
           name: install-npm-wee
           command: npm install
@@ -16,7 +16,7 @@ jobs:
           name: Show installed npm dependencies
           command: npm list --depth=1 || true
       - save_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
+          key: dependency2-cache-{{ checksum "package.json" }}
           paths:
             - ./node_modules
       - restore_cache:
@@ -58,7 +58,7 @@ jobs:
               ;;
             esac
             echo "using tag: --${awsTag}--"
-            node build.js --skipSaveImage --skipTests --noDefaultTags --pushExtra=${awsTag} --pushTo=922145058410.dkr.ecr.eu-central-1.amazonaws.com/caleydo
+            node build.js --injectVersion --skipSaveImage --skipTests --noDefaultTags --pushExtra=${awsTag} --pushTo=922145058410.dkr.ecr.eu-central-1.amazonaws.com/caleydo
       - store_artifacts:
           path: build
           destination: build
@@ -118,4 +118,3 @@ workflows:
               ignore: /.*/
             tags:
               only: /^v.*/
-
