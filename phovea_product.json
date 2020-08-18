@@ -3,39 +3,38 @@
     "type": "web",
     "label": "ordino",
     "repo": "Caleydo/ordino_public",
-    "branch": "v7.0.0",
-    "additional": [{
+    "branch": "v8.0.0",
+    "additional": [
+      {
         "name": "phovea_core",
         "repo": "phovea/phovea_core",
-        "branch": "v4.0.0"
+        "branch": "v5.0.1"
       },
       {
         "name": "phovea_ui",
         "repo": "phovea/phovea_ui",
-        "branch": "v4.0.0"
+        "branch": "v5.0.0"
       },
       {
         "name": "phovea_clue",
         "repo": "phovea/phovea_clue",
-        "branch": "v5.0.0"
+        "branch": "v6.0.0"
       },
       {
         "name": "phovea_security_flask",
         "repo": "phovea/phovea_security_flask",
-        "branch": "v5.0.0"
+        "branch": "v6.0.0"
       },
-
       {
         "name": "tdp_core",
         "repo": "datavisyn/tdp_core",
-        "branch": "v9.1.0"
+        "branch": "v10.0.1"
       },
       {
         "name": "ordino",
         "repo": "Caleydo/ordino",
-        "branch": "v7.0.0"
+        "branch": "v8.0.1"
       },
-
       {
         "name": "tdp_dummy",
         "repo": "Caleydo/tdp_dummy",
@@ -47,33 +46,32 @@
     "type": "api",
     "label": "ordino_server",
     "repo": "phovea/phovea_server",
-    "branch": "v5.0.1",
+    "branch": "v6.0.0",
     "additional": [
       {
         "name": "phovea_security_flask",
         "repo": "phovea/phovea_security_flask",
-        "branch": "v5.0.0"
+        "branch": "v6.0.0"
       },
       {
         "name": "phovea_data_redis",
         "repo": "phovea/phovea_data_redis",
-        "branch": "v5.0.0"
+        "branch": "v6.0.0"
       },
       {
         "name": "phovea_data_mongo",
         "repo": "phovea/phovea_data_mongo",
-        "branch": "v5.0.0"
+        "branch": "v6.0.0"
       },
       {
         "name": "phovea_clue",
         "repo": "phovea/phovea_clue",
-        "branch": "v5.0.0"
+        "branch": "v6.0.0"
       },
-
       {
         "name": "tdp_core",
         "repo": "datavisyn/tdp_core",
-        "branch": "v9.1.0"
+        "branch": "v10.0.1"
       },
       {
         "name": "tdp_dummy",
