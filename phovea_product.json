@@ -43,7 +43,7 @@
       {
         "name": "tdp_publicdb",
         "repo": "Caleydo/tdp_publicdb",
-        "branch": "v8.0.1"
+        "branch": "v8.0.2"
       },
       {
         "name": "tdp_uploaded_data",
@@ -101,7 +101,7 @@
       {
         "name": "tdp_publicdb",
         "repo": "Caleydo/tdp_publicdb",
-        "branch": "v8.0.1"
+        "branch": "v8.0.2"
       },
       {
         "name": "tdp_uploaded_data",
