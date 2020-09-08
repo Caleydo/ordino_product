@@ -44,7 +44,7 @@ context('Ordino Tours', () => {
     cy.clearCookies();
     cy.clearLocalStorage();
 
-    cy.get('#cookie-bar-button').should('be.visible').click();
+    // cy.get('#cookie-bar-button', { timeout: 10000 }).should('be.visible').click();
 
     cy.get('#loginDialog button').should('be.visible').contains('Login').click();
 
