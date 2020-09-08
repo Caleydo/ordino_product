@@ -107,7 +107,7 @@ jobs:
             - v1-deps
       - run:
           name: Install Dependencies
-          command: npm ci
+          command: npm install
       - save_cache:
           key: v1-deps-{{ .Branch }}-{{ checksum "package.json" }}
           # cache NPM modules and the folder with the Cypress binary
