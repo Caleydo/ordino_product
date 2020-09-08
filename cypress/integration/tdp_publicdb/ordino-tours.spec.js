@@ -34,7 +34,7 @@ function getTourIds() {
 context('Ordino Tours', () => {
 
   it('Test all tours', () => {
-    cy.visit('https://ordino-daily.caleydoapp.org', {
+    cy.visit(Cypress.env('host'), {
       onBeforeLoad: (win) => {
         // workaround to clear sessionStorage (see https://github.com/cypress-io/cypress/issues/413#issuecomment-356969904)
         win.sessionStorage.clear();
