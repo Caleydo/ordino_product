@@ -44,15 +44,20 @@ context('Ordino Tours', () => {
     cy.clearCookies();
     cy.clearLocalStorage();
 
-    cy.get('body').find('#cookie-bar-button').then(($button) => {
-      if($button) {
-        cy.get('#cookie-bar-button').click();
+    cy.wait(500); // wait for cookie bar to load and initialize
+
+    cy.get('#cookie-bar-button').should(($button) => {
+      if ($button.length === 0) {
+        console.log('no #cookie-bar-button found');
+        return; // no cookie bar visible (e.g., if called with an IP outside of the EU)
       }
+      console.log('click #cookie-bar-button');
+      $button[0].click(); // if cookie bar is visible click the button to hide the bar
     });
 
     cy.get('#loginDialog button').should('be.visible').contains('Login').click();
 
-    cy.wait(500);
+    cy.wait(500); // wait to finish login and start provenance graph
 
     // dismiss database migration dialog
     cy.get('.modal-title').should('be.visible').contains('Ordino just got better!').closest('.modal-content').find('.modal-footer button').contains('Close').click();
