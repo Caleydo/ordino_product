@@ -44,7 +44,7 @@ context('Ordino Tours', () => {
     cy.clearCookies();
     cy.clearLocalStorage();
 
-    cy.get('#cookie-bar-button').then(($button) => {
+    cy.get('body').find('#cookie-bar-button').then(($button) => {
       if($button) {
         cy.get('#cookie-bar-button').click();
       }
