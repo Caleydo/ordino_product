@@ -91,7 +91,7 @@ jobs:
               fi
               aws --output text ecs run-task --cluster caleydo --task-definition ${awsFamily} --started-by CircleCIAutoUpdate
             fi
-  cypress:
+  cypress: # the job is taken from https://docs.cypress.io/guides/guides/continuous-integration.html#Example-circleci-config-yml-v2-config-file
     docker:
       - image: cypress/base:10
         environment:
