@@ -1,4 +1,10 @@
-version: 2
+version: 2.1
+orbs:
+  # "cypress-io/cypress@1" installs the latest published
+  # version "1.x.y" of the orb. We recommend you then use
+  # the strict explicit version "cypress-io/cypress@1.x.y"
+  # to lock the version and prevent unexpected CI changes
+  cypress: cypress-io/cypress@1
 jobs:
   build:
     working_directory: ~/phovea
@@ -91,6 +97,7 @@ jobs:
               fi
               aws --output text ecs run-task --cluster caleydo --task-definition ${awsFamily} --started-by CircleCIAutoUpdate
             fi
+  test:
 
 workflows:
   version: 2
@@ -104,6 +111,16 @@ workflows:
                 - develop
     jobs:
       - build
+  test-nightly:
+    # triggers:
+    #   - schedule: # nightly test during weekday (2 hours after build)
+    #       cron: "15 3 * * 1-5"
+    #       filters:
+    #         branches:
+    #           only:
+    #             - develop
+    jobs:
+      - cypress/run
   build-branch:
     jobs:
       - build:
