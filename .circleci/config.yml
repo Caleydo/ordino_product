@@ -115,6 +115,8 @@ jobs:
             - ~/.npm
             - ~/.cache
       - run: $(npm bin)/cypress run
+      - store_artifacts:
+          path: /root/app/cypress/
 workflows:
   version: 2
   build-nightly:
@@ -139,10 +141,11 @@ workflows:
       - test
   build-branch:
     jobs:
-      - build:
-          filters:
-            tags:
-              ignore: /^v.*/
+      - test
+      # - build:
+      #     filters:
+      #       tags:
+      #         ignore: /^v.*/
   build-tag:
     jobs:
       - build:
