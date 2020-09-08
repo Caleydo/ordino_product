@@ -91,7 +91,7 @@ jobs:
               fi
               aws --output text ecs run-task --cluster caleydo --task-definition ${awsFamily} --started-by CircleCIAutoUpdate
             fi
-  test:
+  cypress:
     docker:
       - image: cypress/base:10
         environment:
@@ -131,23 +131,22 @@ workflows:
                 - develop
     jobs:
       - build
-  test-nightly:
-    # triggers:
-    #   - schedule: # nightly test during weekday (2 hours after build)
-    #       cron: "15 3 * * 1-5"
-    #       filters:
-    #         branches:
-    #           only:
-    #             - develop
+  cypress-nightly:
+    triggers:
+      - schedule: # nightly test during weekday (2 hours after build)
+          cron: "15 3 * * 1-5"
+          filters:
+            branches:
+              only:
+                - develop
     jobs:
-      - test
+      - cypress
   build-branch:
     jobs:
-      - test
-      # - build:
-      #     filters:
-      #       tags:
-      #         ignore: /^v.*/
+      - build:
+          filters:
+            tags:
+              ignore: /^v.*/
   build-tag:
     jobs:
       - build:
