@@ -19,6 +19,14 @@ Testing
 npm test
 ```
 
+## Run Cypress tests
+
+On Windows 10 + WLS 2 [install and run the VcXsrv](https://dev.to/nickymeuleman/using-graphical-user-interfaces-like-cypress-in-wsl2-249j) before proceeding.
+
+1. `npm install`
+2. `npm run cy:run` for headless mode or `npm run cy:open` to open the dashboard and select test manually
+
+
 Building
 --------
 
@@ -38,4 +46,3 @@ This repository is part of **[Phovea](http://phovea.caleydo.org/)**, a platform 
 [phovea-url]: https://phovea.caleydo.org
 [circleci-image]: https://circleci.com/gh/Caleydo/ordino_product.svg?style=shield
 [circleci-url]: https://circleci.com/gh/Caleydo/ordino_product
-
