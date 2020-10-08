@@ -41,7 +41,7 @@
     "type": "api",
     "label": "ordino_server",
     "repo": "phovea/phovea_server",
-    "branch": "v6.0.0",
+    "branch": "v6.0.1",
     "additional": [
       {
         "name": "phovea_security_flask",
