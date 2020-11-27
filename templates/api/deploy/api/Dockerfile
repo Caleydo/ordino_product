@@ -5,7 +5,9 @@ WORKDIR /phovea
 
 ENV PHOVEA_ENV=production
 ENV PHOVEA_SERVICE=api
-ENV PHOVEA_CONFIG_PATH=/tmp/config.json
+
+# default path in WORKDIR (= /phovea/config.json)
+ENV PHOVEA_CONFIG_PATH=config.json
 
 # secrets
 ENV REDIS_USERNAME=admin
@@ -28,7 +30,9 @@ COPY ./build/source ./
 # establish the runtime user
 RUN useradd -l -M -U -s /bin/bash phovea && \
     chown -R phovea:phovea /phovea && \
-    echo '{}' > /phovea/config.json && chmod a+rw /phovea/config.json && chmod -R a+rw /tmp/
+    echo '{}' > /phovea/config.json && \
+    chmod a+rw /phovea/config.json && \
+    chmod -R a+rw /tmp/
 USER phovea
 
 # Create separate launch file (similar to phovea_server/__main__.py from repository root), because it is not included in build files
@@ -36,7 +40,11 @@ RUN printf "from phovea_server import launch\nlaunch.run()\n" > /phovea/launch.p
 
 EXPOSE 9000
 
-CMD printenv && cat /phovea/config_tmp.json > /tmp/config.json && \
-    sed -i -e "s/REDIS_USERNAME/${REDIS_USERNAME}/g" /tmp/config.json && sed -i -e "s/REDIS_PASSWORD/${REDIS_PASSWORD}/g" /tmp/config.json && \
-    sed -i -e "s/MONGO_USERNAME/${MONGO_USERNAME}/g" /tmp/config.json && sed -i -e "s/MONGO_PASSWORD/${MONGO_PASSWORD}/g" /tmp/config.json && \
+CMD printenv && \
+    cat ${PHOVEA_CONFIG_PATH} > /tmp/config.json && \
+    sed -i -e "s/REDIS_USERNAME/${REDIS_USERNAME}/g" /tmp/config.json && \
+    sed -i -e "s/REDIS_PASSWORD/${REDIS_PASSWORD}/g" /tmp/config.json && \
+    sed -i -e "s/MONGO_USERNAME/${MONGO_USERNAME}/g" /tmp/config.json && \
+    sed -i -e "s/MONGO_PASSWORD/${MONGO_PASSWORD}/g" /tmp/config.json && \
+    export PHOVEA_CONFIG_PATH=/tmp/config.json && \
     python launch.py --env ${PHOVEA_ENV} ${PHOVEA_SERVICE}
