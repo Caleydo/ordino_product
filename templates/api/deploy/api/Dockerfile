@@ -10,13 +10,13 @@ ENV PHOVEA_SERVICE=api
 ENV PHOVEA_CONFIG_PATH=config.json
 
 # secrets
+ENV REDIS_HOST=db_redis
 ENV REDIS_USERNAME=admin
 ENV REDIS_PASSWORD=admin
 
+ENV MONGO_HOST=db_mongo
 ENV MONGO_USERNAME=admin
 ENV MONGO_PASSWORD=admin
-
-RUN printf "deb http://deb.debian.org/debian/ buster main\ndeb-src http://deb.debian.org/debian/ buster main\ndeb http://deb.debian.org/debian-security/ buster/updates main\ndeb-src http://deb.debian.org/debian-security/ buster/updates main" > /etc/apt/sources.list
 
 # install dependencies last step such that everything before can be cached
 COPY requirements*.txt docker_packages.txt docker_script*.sh _docker_data* ./
@@ -42,9 +42,12 @@ EXPOSE 9000
 
 CMD printenv && \
     cat ${PHOVEA_CONFIG_PATH} > /tmp/config.json && \
+    sed -i -e "s/REDIS_HOST/${REDIS_HOST}/g" /tmp/config.json && \
     sed -i -e "s/REDIS_USERNAME/${REDIS_USERNAME}/g" /tmp/config.json && \
     sed -i -e "s/REDIS_PASSWORD/${REDIS_PASSWORD}/g" /tmp/config.json && \
+    sed -i -e "s/MONGO_HOST/${MONGO_HOST}/g" /tmp/config.json && \
     sed -i -e "s/MONGO_USERNAME/${MONGO_USERNAME}/g" /tmp/config.json && \
     sed -i -e "s/MONGO_PASSWORD/${MONGO_PASSWORD}/g" /tmp/config.json && \
     export PHOVEA_CONFIG_PATH=/tmp/config.json && \
+    echo PHOVEA_CONFIG_PATH=${PHOVEA_CONFIG_PATH} && \
     python launch.py --env ${PHOVEA_ENV} ${PHOVEA_SERVICE}
