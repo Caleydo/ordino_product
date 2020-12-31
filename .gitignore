@@ -10,6 +10,7 @@ package-lock.json
 !/.github
 !templates/
 !templates/web/
+!templates/web/*
 !templates/web/deploy
 !templates/web/deploy/web
 !templates/web/deploy/web/*
