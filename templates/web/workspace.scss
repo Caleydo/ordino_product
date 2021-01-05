@@ -9,6 +9,7 @@
 @import "~tdp_core/dist/scss/abstracts/variables";
 @import "~phovea_clue/dist/scss/abstracts/variables";
 @import "~phovea_ui/dist/scss/abstracts/variables";
+@import "~phovea_security_flask/dist/scss/abstracts/variables";
 
 // then all other plugins in this workspace (excluding other apps)
 @import "~tdp_uploaded_data/dist/scss/abstracts/variables";
@@ -28,6 +29,7 @@
 @import "~tdp_publicdb/dist/scss/main";
 @import "~tdp_gene/dist/scss/main";
 @import "~tdp_uploaded_data/dist/scss/main";
+@import "~phovea_security_flask/dist/scss/main";
 @import "~phovea_ui/dist/scss/main";
 @import "~phovea_clue/dist/scss/main";
 @import "~tdp_core/dist/scss/main";
