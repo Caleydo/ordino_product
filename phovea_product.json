@@ -1,123 +1,100 @@
-[
-  {
+{
+  "web": {
     "type": "web",
-    "label": "ordino",
     "repo": "Caleydo/ordino_public",
     "branch": "develop",
-    "additional": [
-      {
-        "name": "phovea_core",
+    "additionals": {
+      "phovea_core": {
         "repo": "phovea/phovea_core",
         "branch": "develop"
       },
-      {
-        "name": "phovea_ui",
+      "phovea_ui": {
         "repo": "phovea/phovea_ui",
         "branch": "develop"
       },
-      {
-        "name": "phovea_clue",
+      "phovea_clue": {
         "repo": "phovea/phovea_clue",
         "branch": "develop"
       },
-      {
-        "name": "phovea_security_flask",
+      "phovea_security_flask": {
         "repo": "phovea/phovea_security_flask",
         "branch": "develop"
       },
-      {
-        "name": "tdp_core",
+      "tdp_core": {
         "repo": "datavisyn/tdp_core",
         "branch": "develop"
       },
-      {
-        "name": "ordino",
+      "ordino": {
         "repo": "Caleydo/ordino",
         "branch": "develop"
       },
-      {
-        "name": "tdp_gene",
+      "tdp_gene": {
         "repo": "Caleydo/tdp_gene",
         "branch": "develop"
       },
-      {
-        "name": "tdp_publicdb",
+      "tdp_publicdb": {
         "repo": "Caleydo/tdp_publicdb",
         "branch": "develop"
       },
-      {
-        "name": "tdp_uploaded_data",
+      "tdp_uploaded_data": {
         "repo": "datavisyn/tdp_uploaded_data",
         "branch": "develop"
       },
-      {
-        "name": "phovea_security_store_generated",
+      "phovea_security_store_generated": {
         "repo": "datavisyn/phovea_security_store_generated",
         "branch": "develop"
       },
-      {
-        "name": "tdp_matomo",
+      "tdp_matomo": {
         "repo": "datavisyn/tdp_matomo",
         "branch": "develop"
       },
-      {
-        "name": "tourdino",
+      "tourdino": {
         "repo": "Caleydo/tourdino",
         "branch": "develop"
       }
-    ]
+    }
   },
-  {
+  "api": {
     "type": "api",
-    "label": "ordino_server",
     "repo": "phovea/phovea_server",
     "branch": "develop",
-    "additional": [
-      {
-        "name": "phovea_security_flask",
+    "additionals": {
+      "phovea_security_flask": {
         "repo": "phovea/phovea_security_flask",
         "branch": "develop"
       },
-      {
-        "name": "phovea_data_redis",
+      "phovea_data_redis": {
         "repo": "phovea/phovea_data_redis",
         "branch": "develop"
       },
-      {
-        "name": "phovea_data_mongo",
+      "phovea_data_mongo": {
         "repo": "phovea/phovea_data_mongo",
         "branch": "develop"
       },
-      {
-        "name": "phovea_clue",
+      "phovea_clue": {
         "repo": "phovea/phovea_clue",
         "branch": "develop"
       },
-      {
-        "name": "tdp_core",
+      "tdp_core": {
         "repo": "datavisyn/tdp_core",
         "branch": "develop"
       },
-      {
-        "name": "tdp_publicdb",
+      "tdp_publicdb": {
         "repo": "Caleydo/tdp_publicdb",
         "branch": "develop"
       },
-      {
-        "name": "tdp_uploaded_data",
+      "tdp_uploaded_data": {
         "repo": "datavisyn/tdp_uploaded_data",
         "branch": "develop"
       },
-      {
-        "name": "phovea_security_store_generated",
+      "phovea_security_store_generated": {
         "repo": "datavisyn/phovea_security_store_generated",
         "branch": "develop"
       },
-      {
-        "name": "tdp_matomo",
+      "tdp_matomo": {
         "repo": "datavisyn/tdp_matomo",
         "branch": "develop"
       }
-    ]
+    }
   }
-]
+}
