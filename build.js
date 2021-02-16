@@ -440,7 +440,7 @@ function patchWorkspace(p) {
     fs.copySync(`./templates/${p.type}`, `${p.tmpDir}/`);
   }
   
-  console.log('used workspace.scss', fs.readFileSync(p.tmpDir + './workspace.scss').toString());
+  console.log('used workspace.scss', fs.readFileSync(p.tmpDir + '/workspace.scss').toString());
 
 
 }
