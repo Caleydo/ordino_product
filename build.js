@@ -439,6 +439,8 @@ function patchWorkspace(p) {
     console.log(`Copy deploy files from`, `./templates/${p.type}`, `to`, `${p.tmpDir}/`);
     fs.copySync(`./templates/${p.type}`, `${p.tmpDir}/`);
   }
+  
+  console.log('used workspace.scss', fs.readFileSync(p.tmpDir + './workspace.scss').toString());
 
 
 }
