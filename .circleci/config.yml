@@ -8,7 +8,7 @@ jobs:
       - checkout
       - setup_remote_docker
       - restore_cache:
-          key: dependency2-cache-{{ checksum "package.json" }}
+          key: dependency5-cache-{{ checksum "package.json" }}
       - run:
           name: install-npm-wee
           command: npm install
@@ -16,7 +16,7 @@ jobs:
           name: Show installed npm dependencies
           command: npm list --depth=1 || true
       - save_cache:
-          key: dependency2-cache-{{ checksum "package.json" }}
+          key: dependency5-cache-{{ checksum "package.json" }}
           paths:
             - ./node_modules
       - restore_cache:
@@ -91,7 +91,34 @@ jobs:
               fi
               aws --output text ecs run-task --cluster caleydo --task-definition ${awsFamily} --started-by CircleCIAutoUpdate
             fi
-
+  cypress: # the job is taken from https://docs.cypress.io/guides/guides/continuous-integration.html#Example-circleci-config-yml-v2-config-file
+    docker:
+      - image: cypress/base:10
+        environment:
+          ## this enables colors in the output
+          TERM: xterm
+    working_directory: ~/app
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-deps-{{ .Branch }}-{{ checksum "package.json" }}
+            - v1-deps-{{ .Branch }}
+            - v1-deps
+      - run:
+          name: Install Dependencies
+          command: npm install
+      - save_cache:
+          key: v1-deps-{{ .Branch }}-{{ checksum "package.json" }}
+          # cache NPM modules and the folder with the Cypress binary
+          paths:
+            - ~/.npm
+            - ~/.cache
+      - run: $(npm bin)/cypress run
+      - store_artifacts:
+          path: /root/app/cypress/screenshots
+      - store_artifacts:
+          path: /root/app/cypress/videos
 workflows:
   version: 2
   build-nightly:
@@ -104,6 +131,16 @@ workflows:
                 - develop
     jobs:
       - build
+  cypress-nightly:
+    triggers:
+      - schedule: # nightly test during weekday (2 hours after build)
+          cron: "15 3 * * 1-5"
+          filters:
+            branches:
+              only:
+                - develop
+    jobs:
+      - cypress
   build-branch:
     jobs:
       - build:
