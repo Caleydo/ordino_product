@@ -11,16 +11,32 @@
 // TODO: Improve Webpack bundles with tree shaking and code splitting to improve performance.
 
 
-$fa-font-path: '~@fortawesome/fontawesome-free/webfonts' !default;
-@import '~@fortawesome/fontawesome-free/scss/solid';
-@import '~@fortawesome/fontawesome-free/scss/regular';
-// @import '~@fortawesome/fontawesome-free/scss/brands';
-@import '~@fortawesome/fontawesome-free/scss/fontawesome';
-
-@import "~phovea_ui/dist/scss/fonts/yantramanav"; // font only
-
+@debug('import plugin scss variables');
+// import all variables scss
+// first default app
 @import "~ordino_public/dist/scss/pages/abstracts/variables"; // pages variables.scss!
+@import "~ordino_public/dist/scss/abstracts/variables";
 
-@import "~bootstrap/scss/bootstrap"; // Bootstrap v4
+// then going up in the dependency tree from the default app
+@import "~ordino/dist/scss/abstracts/variables";
+@import "~tdp_core/dist/scss/abstracts/variables";
+@import "~phovea_clue/dist/scss/abstracts/variables";
+@import "~phovea_ui/dist/scss/abstracts/variables";
+// then all other plugins in this workspace (excluding other apps)
+@import "~@fortawesome/fontawesome-free/scss/variables";
+
+// import mixins
+@import "~@fortawesome/fontawesome-free/scss/mixins";
+@import "~tdp_core/dist/scss/abstracts/mixins";
+
+// @import "~tdp_core/dist/scss/datavisyn";
+
+@debug('import plugin main scss');
+// all main scss (in opposite order of the variables scss
+@import "~phovea_ui/dist/scss/main";
+@import "~phovea_clue/dist/scss/main";
+@import "~tdp_core/dist/scss/main";
+@import "~ordino/dist/scss/main";
+@import "~ordino_public/dist/scss/main";
 
 @import "~ordino_public/dist/scss/pages/main"; // pages main.scss!
