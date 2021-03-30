@@ -23,7 +23,7 @@
       {
         "name": "phovea_security_flask",
         "repo": "phovea/phovea_security_flask",
-        "branch": "develop"
+        "branch": "bootstrap-v4"
       },
       {
         "name": "tdp_core",
@@ -76,7 +76,7 @@
       {
         "name": "phovea_security_flask",
         "repo": "phovea/phovea_security_flask",
-        "branch": "develop"
+        "branch": "bootstrap-v4"
       },
       {
         "name": "phovea_data_redis",
