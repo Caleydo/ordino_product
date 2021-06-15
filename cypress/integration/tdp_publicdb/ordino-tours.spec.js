@@ -19,11 +19,10 @@ function checkTour() {
 function getTourIds() {
   let ids = [];
   // open the tour chooser dialog
-  cy.get('a[data-target="#tdpTourChooser"]').should('be.visible').click();
+  cy.get('#ordino_tours_tab-tab').should('be.visible').click();
 
   return new Cypress.Promise((resolve) => {
-    cy.get('#tdpTourChooser .modal-body ul > li')
-      .should('be.visible') // make sure the dialog is visible
+    cy.get('.ordino-tour-card')
       .each($el =>
         cy.wrap($el).invoke('attr', 'data-id').then(id => ids.push(id))
       )
@@ -55,35 +54,38 @@ context('Ordino Tours', () => {
       $button[0].click(); // if cookie bar is visible click the button to hide the bar
     });
 
-    cy.get('#loginDialog button').should('be.visible').contains('Login').click();
+    cy.wait(1000); // wait for login dialog (i.e., Bootstrap modal) initialization
+
+    // type username and password for local testing without generated username
+    // cy.get('#login_username').type('admin');
+    // cy.get('#login_password').type('admin');
+
+    cy.get('#loginDialog button[type="submit"]').should('be.visible').click();
 
     cy.wait(500); // wait to finish login and start provenance graph
-
-    // dismiss database migration dialog
-    cy.get('.modal-title').should('be.visible').contains('Ordino just got better!').closest('.modal-content').find('.modal-footer button').contains('Close').click();
 
     getTourIds().then((ids) => {
       // loop through every tour
       ids.forEach((id) => {
         // find and start current tour
-        cy.get(`#tdpTourChooser .modal-body ul > li[data-id="${id}"]`).find('a').click();
+        cy.get(`.ordino-tour-card[data-id="${id}"]`).find('a').click();
 
         checkTour();
 
         // open tour chooser dialog again
-        cy.get('a[data-target="#tdpTourChooser"]').should('be.visible').click();
+        cy.get('#ordino_tours_tab-tab').should('be.visible').click();
       });
 
       // final check if all tours are tested
-      cy.get('#tdpTourChooser .modal-body ul > li').should(($lis) => {
-        expect($lis).to.have.length(ids.length);
+      // cy.get('#tdpTourChooser .modal-body ul > li').should(($lis) => {
+      //   expect($lis).to.have.length(ids.length);
 
-        const allChecked = $lis.get().every((li) => {
-          return li.querySelector('i').classList.contains('fa-check-square');
-        });
+      //   const allChecked = $lis.get().every((li) => {
+      //     return li.querySelector('i').classList.contains('fa-check-square');
+      //   });
 
-        expect(allChecked).to.eq(true);
-      });
+      //   expect(allChecked).to.eq(true);
+      // });
     });
   });
 });
