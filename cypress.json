@@ -2,6 +2,7 @@
   "viewportWidth": 1920,
   "viewportHeight": 1080,
   "env": {
-    "host": "https://ordino-daily.caleydoapp.org"
+    "host": "https://ordino-daily.caleydoapp.org/app/",
+    "_host": "http://localhost:8080/app/"
   }
 }
