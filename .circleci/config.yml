@@ -82,7 +82,7 @@ jobs:
             tasksExists=$(aws --output text ecs list-task-definitions --family-prefix ${awsFamily})
             echo "existsTaskDefinition? --${tasksExists}--"
             if [ ! -z "$tasksExists" ]; then
-              isTaskRunning=$(aws --output text ecs list-tasks --cluster caleydo --family ${awsFamily})
+              isTaskRunning=$(aws --output text ecs list-tasks --cluster ordino-public --family ${awsFamily})
               echo "isTaskRunning? --${isTaskRunning}--"
               if [ ! -z "$isTaskRunning" ]; then
                 taskId=$(echo "${isTaskRunning}" | cut -f2)
