@@ -87,7 +87,7 @@ jobs:
               if [ ! -z "$isTaskRunning" ]; then
                 taskId=$(echo "${isTaskRunning}" | cut -f2)
                 echo "taskId--${taskId}--"
-                aws --output text ecs stop-task --cluster caleydo --task ${taskId}
+                aws --output text ecs stop-task --cluster ordino-public --task ${taskId}
               fi
               aws --output text ecs run-task --cluster caleydo --task-definition ${awsFamily} --started-by CircleCIAutoUpdate
             fi
