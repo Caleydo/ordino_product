@@ -89,7 +89,7 @@ jobs:
                 echo "taskId--${taskId}--"
                 aws --output text ecs stop-task --cluster ordino-public --task ${taskId}
               fi
-              aws --output text ecs run-task --cluster caleydo --task-definition ${awsFamily} --started-by CircleCIAutoUpdate
+              aws --output text ecs run-task --cluster ordino-public --task-definition ${awsFamily} --started-by CircleCIAutoUpdate
             fi
   cypress: # the job is taken from https://docs.cypress.io/guides/guides/continuous-integration.html#Example-circleci-config-yml-v2-config-file
     docker:
