@@ -1,6 +1,4 @@
-@debug('import plugin scss variables');
-
-
+@debug('import bootstrap');
 @import "~phovea_ui/dist/scss/vendors/bootstrap/1_functions";
 
 // import custom theme variables and bootstrap variables overrides
@@ -15,6 +13,7 @@
 
 @import "~phovea_ui/dist/scss/vendors/bootstrap/5_components";
 
+@debug('import plugin scss variables');
 // import all variables scss
 // first default app
 @import "~ordino_public/dist/scss/abstracts/variables";
