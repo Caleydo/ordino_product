@@ -48,7 +48,7 @@
       {
         "name": "tdp_uploaded_data",
         "repo": "datavisyn/tdp_uploaded_data",
-        "branch": "vstoiber/bootstrap_v5"
+        "branch": "vstoiber_bootstrap_v5"
       },
       {
         "name": "phovea_security_store_generated",
@@ -106,7 +106,7 @@
       {
         "name": "tdp_uploaded_data",
         "repo": "datavisyn/tdp_uploaded_data",
-        "branch": "vstoiber/bootstrap_v5"
+        "branch": "vstoiber_bootstrap_v5"
       },
       {
         "name": "phovea_security_store_generated",
