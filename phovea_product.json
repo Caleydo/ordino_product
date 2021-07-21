@@ -53,7 +53,7 @@
       {
         "name": "phovea_security_store_generated",
         "repo": "datavisyn/phovea_security_store_generated",
-        "branch": "develop"
+        "branch": "vstoiber/bootstrap_v5"
       },
       {
         "name": "tdp_matomo",
