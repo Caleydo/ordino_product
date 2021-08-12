@@ -3,7 +3,7 @@
     "type": "web",
     "label": "ordino",
     "repo": "Caleydo/ordino_public",
-    "branch": "welcome-page",
+    "branch": "develop",
     "additional": [
       {
         "name": "phovea_core",
@@ -13,57 +13,57 @@
       {
         "name": "phovea_ui",
         "repo": "phovea/phovea_ui",
-        "branch": "bootstrap-v4"
+        "branch": "develop"
       },
       {
         "name": "phovea_clue",
         "repo": "phovea/phovea_clue",
-        "branch": "bootstrap-v4"
+        "branch": "develop"
       },
       {
         "name": "phovea_security_flask",
         "repo": "phovea/phovea_security_flask",
-        "branch": "bootstrap-v4"
+        "branch": "develop"
       },
       {
         "name": "tdp_core",
         "repo": "datavisyn/tdp_core",
-        "branch": "bootstrap-v4"
+        "branch": "develop"
       },
       {
         "name": "ordino",
         "repo": "Caleydo/ordino",
-        "branch": "welcome-page"
+        "branch": "develop"
       },
       {
         "name": "tdp_gene",
         "repo": "Caleydo/tdp_gene",
-        "branch": "bootstrap-v4"
+        "branch": "develop"
       },
       {
         "name": "tdp_publicdb",
         "repo": "Caleydo/tdp_publicdb",
-        "branch": "bootstrap-v4"
+        "branch": "develop"
       },
       {
         "name": "tdp_uploaded_data",
         "repo": "datavisyn/tdp_uploaded_data",
-        "branch": "bootstrap-v4"
+        "branch": "develop"
       },
       {
         "name": "phovea_security_store_generated",
         "repo": "datavisyn/phovea_security_store_generated",
-        "branch": "bootstrap-v4"
+        "branch": "develop"
       },
       {
         "name": "tdp_matomo",
         "repo": "datavisyn/tdp_matomo",
-        "branch": "bootstrap-v4"
+        "branch": "develop"
       },
       {
         "name": "tourdino",
         "repo": "Caleydo/tourdino",
-        "branch": "bootstrap-v4"
+        "branch": "develop"
       }
     ]
   },
@@ -76,7 +76,7 @@
       {
         "name": "phovea_security_flask",
         "repo": "phovea/phovea_security_flask",
-        "branch": "bootstrap-v4"
+        "branch": "develop"
       },
       {
         "name": "phovea_data_redis",
@@ -91,32 +91,32 @@
       {
         "name": "phovea_clue",
         "repo": "phovea/phovea_clue",
-        "branch": "bootstrap-v4"
+        "branch": "develop"
       },
       {
         "name": "tdp_core",
         "repo": "datavisyn/tdp_core",
-        "branch": "bootstrap-v4"
+        "branch": "develop"
       },
       {
         "name": "tdp_publicdb",
         "repo": "Caleydo/tdp_publicdb",
-        "branch": "bootstrap-v4"
+        "branch": "develop"
       },
       {
         "name": "tdp_uploaded_data",
         "repo": "datavisyn/tdp_uploaded_data",
-        "branch": "bootstrap-v4"
+        "branch": "develop"
       },
       {
         "name": "phovea_security_store_generated",
         "repo": "datavisyn/phovea_security_store_generated",
-        "branch": "bootstrap-v4"
+        "branch": "develop"
       },
       {
         "name": "tdp_matomo",
         "repo": "datavisyn/tdp_matomo",
-        "branch": "bootstrap-v4"
+        "branch": "develop"
       }
     ]
   }
