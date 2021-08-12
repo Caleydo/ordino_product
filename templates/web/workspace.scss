@@ -1,5 +1,20 @@
 @debug('import plugin scss variables');
 
+
+@import "~phovea_ui/dist/scss/vendors/bootstrap/1_functions";
+
+// import custom theme variables and bootstrap variables overrides
+// @import "~tdp_core/dist/scss/themes/datavisyn";
+@import "~phovea_ui/dist/scss/vendors/bootstrap/2_variables_overrides";
+
+
+@import "~phovea_ui/dist/scss/vendors/bootstrap/3_variables_mixins_utilities";
+
+@import "~ordino/dist/scss/vendors/bootstrap_modify_maps";
+@import "~phovea_ui/dist/scss/vendors/bootstrap/4_modify_maps";
+
+@import "~phovea_ui/dist/scss/vendors/bootstrap/5_components";
+
 // import all variables scss
 // first default app
 @import "~ordino_public/dist/scss/abstracts/variables";
