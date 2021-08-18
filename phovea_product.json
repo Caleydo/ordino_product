@@ -64,6 +64,11 @@
         "name": "tourdino",
         "repo": "Caleydo/tourdino",
         "branch": "develop"
+      },
+      {
+        "name": "tdp_publicdb_ext",
+        "repo": "datavisyn/tdp_publicdb_ext",
+        "branch": "tschachinger/21_connect_charts_with_database"
       }
     ]
   },
