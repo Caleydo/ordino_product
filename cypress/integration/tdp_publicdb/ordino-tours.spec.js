@@ -60,6 +60,8 @@ context('Ordino Tours', () => {
     // cy.get('#login_username').type('admin');
     // cy.get('#login_password').type('admin');
 
+    cy.get('#login_remember').should('be.visible').click();
+
     cy.get('#loginDialog button[type="submit"]').should('be.visible').click();
 
     cy.wait(500); // wait to finish login and start provenance graph
