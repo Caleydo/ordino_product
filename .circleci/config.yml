@@ -100,7 +100,9 @@ workflows:
               only:
                 - develop
     jobs:
-      - build
+      - build:
+          context:
+            - org-global      
   cypress-nightly:
     triggers:
       - schedule: # nightly test during weekday (2 hours after build)
