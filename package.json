@@ -2,7 +2,7 @@
   "name": "ordino_product",
   "description": "Analysis tool for cancer genomics to flexibly rank, filter and explore genes, cell lines and tissue samples.",
   "homepage": "https://phovea.caleydo.org",
-  "version": "10.0.0",
+  "version": "9.1.0",
   "author": {
     "name": "datavisyn",
     "email": "contact@datavisyn.io",
