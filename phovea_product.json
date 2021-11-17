@@ -6,26 +6,6 @@
     "branch": "develop",
     "additional": [
       {
-        "name": "phovea_core",
-        "repo": "phovea/phovea_core",
-        "branch": "develop"
-      },
-      {
-        "name": "phovea_ui",
-        "repo": "phovea/phovea_ui",
-        "branch": "develop"
-      },
-      {
-        "name": "phovea_clue",
-        "repo": "phovea/phovea_clue",
-        "branch": "develop"
-      },
-      {
-        "name": "phovea_security_flask",
-        "repo": "phovea/phovea_security_flask",
-        "branch": "develop"
-      },
-      {
         "name": "tdp_core",
         "repo": "datavisyn/tdp_core",
         "branch": "develop"
@@ -56,11 +36,6 @@
         "branch": "develop"
       },
       {
-        "name": "tdp_matomo",
-        "repo": "datavisyn/tdp_matomo",
-        "branch": "develop"
-      },
-      {
         "name": "tourdino",
         "repo": "Caleydo/tourdino",
         "branch": "develop"
@@ -73,26 +48,6 @@
     "repo": "phovea/phovea_server",
     "branch": "develop",
     "additional": [
-      {
-        "name": "phovea_security_flask",
-        "repo": "phovea/phovea_security_flask",
-        "branch": "develop"
-      },
-      {
-        "name": "phovea_data_redis",
-        "repo": "phovea/phovea_data_redis",
-        "branch": "develop"
-      },
-      {
-        "name": "phovea_data_mongo",
-        "repo": "phovea/phovea_data_mongo",
-        "branch": "develop"
-      },
-      {
-        "name": "phovea_clue",
-        "repo": "phovea/phovea_clue",
-        "branch": "develop"
-      },
       {
         "name": "tdp_core",
         "repo": "datavisyn/tdp_core",
@@ -111,11 +66,6 @@
       {
         "name": "phovea_security_store_generated",
         "repo": "datavisyn/phovea_security_store_generated",
-        "branch": "develop"
-      },
-      {
-        "name": "tdp_matomo",
-        "repo": "datavisyn/tdp_matomo",
         "branch": "develop"
       }
     ]
