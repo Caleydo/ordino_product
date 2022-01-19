@@ -100,9 +100,7 @@ workflows:
               only:
                 - develop
     jobs:
-      - build:
-          context:
-            - org-global      
+      - build    
   cypress-nightly:
     triggers:
       - schedule: # nightly test during weekday (2 hours after build)
@@ -116,16 +114,12 @@ workflows:
   build-branch:
     jobs:
       - build:
-          context:
-            - org-global
           filters:
             tags:
               ignore: /^v.*/
   build-tag:
     jobs:
       - build:
-          context:
-            - org-global
           filters:
             branches:
               ignore: /.*/
