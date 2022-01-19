@@ -38,7 +38,6 @@ jobs:
               ;;
             esac
             echo "using tag: --${awsTag}--"
-            aws ecr get-login-password --region eu-central-1 | docker login --username AWS --password-stdin 478950388974.dkr.ecr.eu-central-1.amazonaws.com
             node build.js --injectVersion --skipSaveImage --skipTests --noDefaultTags --pushExtra=${awsTag} --pushTo=478950388974.dkr.ecr.eu-central-1.amazonaws.com/caleydo
       - store_artifacts:
           path: build
