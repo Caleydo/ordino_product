@@ -38,11 +38,7 @@ jobs:
               ;;
             esac
             echo "using tag: --${awsTag}--"
-            node build.js --injectVersion --skipSaveImage --skipTests --noDefaultTags
-      - aws-ecr/push-image:
-            account-url: 478950388974.dkr.ecr.eu-central-1.amazonaws.com
-            repo: caleydo/ordino
-            tag: "${CIRCLE_BRANCH//\//_}${CIRCLE_TAG}"
+            node build.js --injectVersion --skipSaveImage --skipTests --noDefaultTags --pushExtra=${awsTag} --pushTo=478950388974.dkr.ecr.eu-central-1.amazonaws.com/caleydo
       - store_artifacts:
           path: build
           destination: build
