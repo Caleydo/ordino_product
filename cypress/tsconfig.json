@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "outDir": "./integration",
+    "rootDir": "./integration",
+    "declaration": false,
+    "declarationMap": false,
+    "composite": false,
+    "types": [
+      "cypress",
+      "detect-browser",
+    ]
+  },
+  "include": ["**/*.ts"],
+  "exclude": ["**/*.d.ts"]
+}
