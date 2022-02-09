@@ -21,6 +21,7 @@
     "predist": "npm run build",
     "dist": "mkdir dist && cd build && tar cvzf ../dist/ordino_product.tar.gz *",
     "cy:open": "cypress open",
+    "cy:compile": "cd cypress && tsc",
     "cy:run": "cypress run"
   },
   "dependencies": {
@@ -31,9 +32,13 @@
     "lodash": "4.17.20",
     "yamljs": "0.3.0",
     "yargs-parser": "18.0.0",
-    "yeoman-environment": "2.8.0"
+    "yeoman-environment": "2.8.0",
+    "detect-browser": "^5.2.0",
+    "tslib": "^2.3.1"
   },
   "devDependencies": {
-    "cypress": "^7.5.0"
+    "@types/node": "^16.7.1",
+    "cypress": "^8.3.1",
+    "typescript": "~4.3.5"
   }
 }
