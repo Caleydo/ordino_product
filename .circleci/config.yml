@@ -84,6 +84,7 @@ jobs:
           paths:
             - ~/.npm
             - ~/.cache
+      - run: npm run cy:compile
       - run: $(npm bin)/cypress run
       - store_artifacts:
           path: /root/app/cypress/screenshots
