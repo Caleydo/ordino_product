@@ -3,42 +3,42 @@
     "type": "web",
     "label": "ordino",
     "repo": "Caleydo/ordino_public",
-    "branch": "develop",
+    "branch": "v11.0.0",
     "additional": [
       {
         "name": "tdp_core",
         "repo": "datavisyn/tdp_core",
-        "branch": "develop"
+        "branch": "v14.0.2"
       },
       {
         "name": "ordino",
         "repo": "Caleydo/ordino",
-        "branch": "develop"
+        "branch": "v11.0.0"
       },
       {
         "name": "tdp_gene",
         "repo": "Caleydo/tdp_gene",
-        "branch": "develop"
+        "branch": "v10.0.0"
       },
       {
         "name": "tdp_publicdb",
         "repo": "Caleydo/tdp_publicdb",
-        "branch": "develop"
+        "branch": "v11.0.0"
       },
       {
         "name": "tdp_uploaded_data",
         "repo": "datavisyn/tdp_uploaded_data",
-        "branch": "develop"
+        "branch": "v11.0.0"
       },
       {
         "name": "phovea_security_store_generated",
         "repo": "datavisyn/phovea_security_store_generated",
-        "branch": "develop"
+        "branch": "v12.0.0"
       },
       {
         "name": "tourdino",
         "repo": "Caleydo/tourdino",
-        "branch": "develop"
+        "branch": "v5.0.0"
       }
     ]
   },
@@ -46,27 +46,27 @@
     "type": "api",
     "label": "ordino_server",
     "repo": "phovea/phovea_server",
-    "branch": "develop",
+    "branch": "v9.0.0",
     "additional": [
       {
         "name": "tdp_core",
         "repo": "datavisyn/tdp_core",
-        "branch": "develop"
+        "branch": "v14.0.2"
       },
       {
         "name": "tdp_publicdb",
         "repo": "Caleydo/tdp_publicdb",
-        "branch": "develop"
+        "branch": "v11.0.0"
       },
       {
         "name": "tdp_uploaded_data",
         "repo": "datavisyn/tdp_uploaded_data",
-        "branch": "develop"
+        "branch": "v11.0.0"
       },
       {
         "name": "phovea_security_store_generated",
         "repo": "datavisyn/phovea_security_store_generated",
-        "branch": "develop"
+        "branch": "v12.0.0"
       }
     ]
   }
