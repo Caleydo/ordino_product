@@ -45,7 +45,7 @@
   {
     "type": "api",
     "label": "ordino_server",
-    "repo": "phovea/phovea_server",
+    "repo": "datavisyn/tdp_core",
     "branch": "develop",
     "additional": [
       {
