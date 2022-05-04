@@ -49,11 +49,6 @@
     "branch": "develop",
     "additional": [
       {
-        "name": "tdp_core",
-        "repo": "datavisyn/tdp_core",
-        "branch": "develop"
-      },
-      {
         "name": "tdp_publicdb",
         "repo": "Caleydo/tdp_publicdb",
         "branch": "develop"
