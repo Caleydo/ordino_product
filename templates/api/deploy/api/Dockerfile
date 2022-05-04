@@ -8,7 +8,7 @@ ENV PHOVEA_CONFIG_PATH=/phovea/config.json
 
 # install dependencies last step such that everything before can be cached
 COPY requirements.txt .
-RUN apt-get update && pip install --no-cache-dir -r /tmp/requirements.txt
+RUN apt-get update && pip install --no-cache-dir -r /phovea/requirements.txt
 
 COPY ./build/source ./
 
