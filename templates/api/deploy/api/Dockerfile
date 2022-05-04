@@ -3,6 +3,7 @@ LABEL maintainer="contact@datavisyn.io"
 
 WORKDIR /phovea
 
+ENV PYTHONUNBUFFERED=1
 ENV ENV=production
 ENV PHOVEA_CONFIG_PATH=/phovea/config.json
 
