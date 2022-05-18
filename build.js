@@ -68,13 +68,13 @@ function toRepoUrl(url) {
     }
     // have a http url need an ssh url
     const m = url.match(/(https?:\/\/([^/]+)\/|git@(.+):)([\w\d-_/]+)(.git)?/);
-    return `git@${m[2]}:${m[4]}.git`;
+     return `git+ssh@${m[2]}:${m[4]}.git`;
   }
   if (!url.includes('/')) {
     url = `Caleydo/${url}`;
   }
   if (argv.useSSH) {
-    return `git@github.com:${url}.git`;
+     return `git+ssh@github.com:${url}.git`;
   }
   return `https://github.com/${url}.git`;
 }
