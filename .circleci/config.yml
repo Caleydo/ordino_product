@@ -62,33 +62,25 @@ jobs:
               aws --output text ecs run-task --cluster JKU_ASG_Cluster --task-definition ${awsFamily} --started-by CircleCIAutoUpdate
             fi
   cypress: # the job is taken from https://docs.cypress.io/guides/guides/continuous-integration.html#Example-circleci-config-yml-v2-config-file
-    docker:
-      - image: cypress/base:10
-        environment:
-          ## this enables colors in the output
-          TERM: xterm
-    working_directory: ~/app
+    executor: node-executor
+    environment:
+      CYPRESS_host: "https://ordino-daily.caleydoapp.org/"
     steps:
+      - attach_workspace:
+          at: ~/phovea
       - checkout
-      - restore_cache:
-          keys:
-            - v1-deps-{{ .Branch }}-{{ checksum "package.json" }}
-            - v1-deps-{{ .Branch }}
-            - v1-deps
+      - setup_remote_docker 
       - run:
-          name: Install Dependencies
-          command: npm install
-      - save_cache:
-          key: v1-deps-{{ .Branch }}-{{ checksum "package.json" }}
-          # cache NPM modules and the folder with the Cypress binary
-          paths:
-            - ~/.npm
-            - ~/.cache
-      - run: $(npm bin)/cypress run
+          name: Run cypress tests
+          command: |
+            cd ./frontend
+            npm install
+            node ./symlink_frontend_repos.js
+            npx cypress run
       - store_artifacts:
-          path: /root/app/cypress/screenshots
+          path: ./frontend/cypress/screenshots
       - store_artifacts:
-          path: /root/app/cypress/videos
+          path: ./frontend/cypress/videos
 workflows:
   version: 2
   build-nightly:
@@ -103,16 +95,16 @@ workflows:
       - build:
           context:
             - org-global      
-  cypress-nightly:
-    triggers:
-      - schedule: # nightly test during weekday (2 hours after build)
-          cron: "15 3 * * 1-5"
-          filters:
-            branches:
-              only:
-                - develop
-    jobs:
-      - cypress
+  # cypress-nightly:
+  #   triggers:
+  #     - schedule: # nightly test during weekday (2 hours after build)
+  #         cron: "15 3 * * 1-5"
+  #         filters:
+  #           branches:
+  #             only:
+  #               - develop
+  #   jobs:
+  #     - cypress
   build-branch:
     jobs:
       - build:
@@ -121,6 +113,9 @@ workflows:
           filters:
             tags:
               ignore: /^v.*/
+      - cypress:   
+          requires:
+            - build 
   build-tag:
     jobs:
       - build:

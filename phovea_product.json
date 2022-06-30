@@ -13,7 +13,7 @@
       {
         "name": "ordino",
         "repo": "Caleydo/ordino",
-        "branch": "develop"
+        "branch": "cypress-testing"
       },
       {
         "name": "tdp_gene",
@@ -23,7 +23,7 @@
       {
         "name": "tdp_publicdb",
         "repo": "Caleydo/tdp_publicdb",
-        "branch": "develop"
+        "branch": "cypress-testing"
       },
       {
         "name": "tdp_uploaded_data",
@@ -51,7 +51,7 @@
       {
         "name": "tdp_publicdb",
         "repo": "Caleydo/tdp_publicdb",
-        "branch": "develop"
+        "branch": "cypress-testing"
       },
       {
         "name": "tdp_uploaded_data",
