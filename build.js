@@ -561,7 +561,8 @@ function fillDefaults(descs, dockerComposePatch) {
       delete dockerComposePatch.services[d.label].image;
     }
     // include hint in the tmp directory which one is it
-    d.tmpDir = `./tmp${i}_${d.name.replace(/\s+/, '').slice(0, 5)}`;
+    d.tmpDir = `./${d.tmpDir}` || `./tmp${i}_${d.name.replace(/\s+/, '').slice(0, 5)}`;
+    console.info("d.tmpDir", d.tmpDir);
   });
 
   return descs;
