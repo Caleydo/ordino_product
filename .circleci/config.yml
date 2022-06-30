@@ -61,6 +61,10 @@ jobs:
               fi
               aws --output text ecs run-task --cluster JKU_ASG_Cluster --task-definition ${awsFamily} --started-by CircleCIAutoUpdate
             fi
+      - persist_to_workspace:
+          root: ~/phovea
+          paths:
+            - .
   cypress: # the job is taken from https://docs.cypress.io/guides/guides/continuous-integration.html#Example-circleci-config-yml-v2-config-file
     executor: node-executor
     environment:
