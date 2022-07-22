@@ -9,7 +9,7 @@
       {
         "name": "tdp_core",
         "repo": "datavisyn/tdp_core",
-        "branch": "develop"
+        "branch": "cypress-testing-latest"
       },
       {
         "name": "ordino",
@@ -48,7 +48,7 @@
     "label": "ordino_server",
     "repo": "datavisyn/tdp_core",
     "tmpDir": "backend",
-    "branch": "develop",
+    "branch": "cypress-testing-latest",
     "additional": [
       {
         "name": "tdp_publicdb",

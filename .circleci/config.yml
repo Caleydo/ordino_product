@@ -80,7 +80,7 @@ jobs:
             cd ./frontend
             npm install
             node ./symlink_frontend_repos.js
-            npx cypress run
+            npm run cy:run:ordino_public
       - store_artifacts:
           path: ./frontend/cypress/screenshots
       - store_artifacts:
