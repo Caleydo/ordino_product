@@ -4,17 +4,17 @@
     "label": "ordino",
     "repo": "Caleydo/ordino_public",
     "tmpDir": "frontend",
-    "branch": "cypress_testing",
+    "branch": "develop",
     "additional": [
       {
         "name": "tdp_core",
         "repo": "datavisyn/tdp_core",
-        "branch": "cypress-testing-latest"
+        "branch": "develop"
       },
       {
         "name": "ordino",
         "repo": "Caleydo/ordino",
-        "branch": "cypress-testing"
+        "branch": "develop"
       },
       {
         "name": "tdp_gene",
@@ -24,7 +24,7 @@
       {
         "name": "tdp_publicdb",
         "repo": "Caleydo/tdp_publicdb",
-        "branch": "cypress-testing"
+        "branch": "develop"
       },
       {
         "name": "tdp_uploaded_data",
@@ -48,12 +48,12 @@
     "label": "ordino_server",
     "repo": "datavisyn/tdp_core",
     "tmpDir": "backend",
-    "branch": "cypress-testing-latest",
+    "branch": "develop",
     "additional": [
       {
         "name": "tdp_publicdb",
         "repo": "Caleydo/tdp_publicdb",
-        "branch": "cypress-testing"
+        "branch": "develop"
       },
       {
         "name": "tdp_uploaded_data",
