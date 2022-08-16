@@ -61,34 +61,30 @@ jobs:
               fi
               aws --output text ecs run-task --cluster JKU_ASG_Cluster --task-definition ${awsFamily} --started-by CircleCIAutoUpdate
             fi
-  cypress: # the job is taken from https://docs.cypress.io/guides/guides/continuous-integration.html#Example-circleci-config-yml-v2-config-file
-    docker:
-      - image: cypress/base:10
-        environment:
-          ## this enables colors in the output
-          TERM: xterm
-    working_directory: ~/app
-    steps:
-      - checkout
-      - restore_cache:
-          keys:
-            - v1-deps-{{ .Branch }}-{{ checksum "package.json" }}
-            - v1-deps-{{ .Branch }}
-            - v1-deps
-      - run:
-          name: Install Dependencies
-          command: npm install
-      - save_cache:
-          key: v1-deps-{{ .Branch }}-{{ checksum "package.json" }}
-          # cache NPM modules and the folder with the Cypress binary
+      - persist_to_workspace:
+          root: ~/phovea
           paths:
-            - ~/.npm
-            - ~/.cache
-      - run: $(npm bin)/cypress run
+            - .
+  cypress: # the job is taken from https://docs.cypress.io/guides/guides/continuous-integration.html#Example-circleci-config-yml-v2-config-file
+    executor: node-executor
+    environment:
+      CYPRESS_host: "https://ordino-daily.caleydoapp.org/"
+    steps:
+      - attach_workspace:
+          at: ~/phovea
+      - checkout
+      - setup_remote_docker 
+      - run:
+          name: Run cypress tests
+          command: |
+            cd ./frontend
+            npm install
+            node ./symlink_frontend_repos.js
+            npm run cy:run:ordino_public
       - store_artifacts:
-          path: /root/app/cypress/screenshots
+          path: ./frontend/cypress/screenshots
       - store_artifacts:
-          path: /root/app/cypress/videos
+          path: ./frontend/cypress/videos
 workflows:
   version: 2
   build-nightly:
