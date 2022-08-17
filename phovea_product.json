@@ -17,11 +17,6 @@
         "branch": "visyn_scripts"
       },
       {
-        "name": "tdp_gene",
-        "repo": "Caleydo/tdp_gene",
-        "branch": "visyn_scripts"
-      },
-      {
         "name": "tdp_publicdb",
         "repo": "Caleydo/tdp_publicdb",
         "branch": "visyn_scripts"
