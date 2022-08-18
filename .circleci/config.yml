@@ -61,24 +61,32 @@ jobs:
               fi
               aws --output text ecs run-task --cluster JKU_ASG_Cluster --task-definition ${awsFamily} --started-by CircleCIAutoUpdate
             fi
-      - persist_to_workspace:
-          root: ~/phovea
-          paths:
-            - .
   cypress: # the job is taken from https://docs.cypress.io/guides/guides/continuous-integration.html#Example-circleci-config-yml-v2-config-file
     executor: node-executor
     environment:
       CYPRESS_host: "https://ordino-daily.caleydoapp.org/"
     steps:
-      - attach_workspace:
-          at: ~/phovea
       - checkout
-      - setup_remote_docker 
+      - setup_remote_docker
+      - restore_cache:
+          key: deps1-{{ .Branch }}-{{ checksum "package.json" }}
+      - run:
+          name: install-npm-wee
+          command: npm install
+      - run:
+          name: Show installed npm dependencies
+          command: npm list --depth=1 || true
+      - save_cache:
+          key: deps1-{{ .Branch }}-{{ checksum "package.json" }}
+          paths: ./node_modules
+      - deploy:
+          name: build and deploy
+          command: |
+            node build.js --injectVersion --skipSaveImage --skipTests --noDefaultTags
       - run:
           name: Run cypress tests
           command: |
             cd ./frontend
-            npm install
             node ./symlink_frontend_repos.js
             npm run cy:run:ordino_public
       - store_artifacts:
