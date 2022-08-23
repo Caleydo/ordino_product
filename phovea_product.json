@@ -17,11 +17,6 @@
         "branch": "develop"
       },
       {
-        "name": "tdp_gene",
-        "repo": "Caleydo/tdp_gene",
-        "branch": "develop"
-      },
-      {
         "name": "tdp_publicdb",
         "repo": "Caleydo/tdp_publicdb",
         "branch": "develop"
