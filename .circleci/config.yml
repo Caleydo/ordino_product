@@ -87,6 +87,7 @@ jobs:
           name: Run cypress tests
           command: |
             cd ./frontend
+            npm install
             node ./symlink_frontend_repos.js
             npm run cy:run:ordino_public
       - store_artifacts:
