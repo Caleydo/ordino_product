@@ -4,37 +4,37 @@
     "label": "ordino",
     "repo": "Caleydo/ordino_public",
     "tmpDir": "frontend",
-    "branch": "develop",
+    "branch": "v13.0.0",
     "additional": [
       {
         "name": "tdp_core",
         "repo": "datavisyn/tdp_core",
-        "branch": "develop"
+        "branch": "v16.0.1"
       },
       {
         "name": "ordino",
         "repo": "Caleydo/ordino",
-        "branch": "develop"
+        "branch": "v13.0.0"
       },
       {
         "name": "tdp_publicdb",
         "repo": "Caleydo/tdp_publicdb",
-        "branch": "develop"
+        "branch": "v13.0.0"
       },
       {
         "name": "tdp_uploaded_data",
         "repo": "datavisyn/tdp_uploaded_data",
-        "branch": "develop"
+        "branch": "v13.0.0"
       },
       {
         "name": "phovea_security_store_generated",
         "repo": "datavisyn/phovea_security_store_generated",
-        "branch": "develop"
+        "branch": "v14.0.0"
       },
       {
         "name": "tourdino",
         "repo": "Caleydo/tourdino",
-        "branch": "develop"
+        "branch": "v7.0.0"
       }
     ]
   },
@@ -43,22 +43,22 @@
     "label": "ordino_server",
     "repo": "datavisyn/tdp_core",
     "tmpDir": "backend",
-    "branch": "develop",
+    "branch": "v16.0.1",
     "additional": [
       {
         "name": "tdp_publicdb",
         "repo": "Caleydo/tdp_publicdb",
-        "branch": "develop"
+        "branch": "v13.0.0"
       },
       {
         "name": "tdp_uploaded_data",
         "repo": "datavisyn/tdp_uploaded_data",
-        "branch": "develop"
+        "branch": "v13.0.0"
       },
       {
         "name": "phovea_security_store_generated",
         "repo": "datavisyn/phovea_security_store_generated",
-        "branch": "develop"
+        "branch": "v14.0.0"
       }
     ]
   }
