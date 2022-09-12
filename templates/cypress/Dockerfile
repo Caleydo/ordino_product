@@ -1,9 +1,18 @@
-FROM node:14.17-buster
+FROM node:16.17.0-buster 
 
-WORKDIR /etc/frontend/
-COPY ./ /etc/frontend/
+WORKDIR /etc/frontend
+COPY ./ ./
 
-ENV CYPRESS_HOST="https://ordino-daily.caleydoapp.org/"
+ENV CYPRESS_host="https://ordino-daily.caleydoapp.org/"
+ENV CYPRESS_API_URL=http://localhost:1234
+ENV APP=ordino_public
+ENV KEY=XXX
+
+# to suppress ERROR:gpu_memory_buffer_support_x11.cc(44)] dri3 extension not supported.
+ENV ELECTRON_EXTRA_LAUNCH_ARGS=--disable-gpu
+
+# to suppress tput: No value for $TERM and no -T specified
+ENV TERM=xterm
 
 RUN apt-get install          
 # https://docs.cypress.io/guides/continuous-integration/introduction#Dependencies 
@@ -20,6 +29,8 @@ RUN apt-get update && apt-get install -y \
   xauth \
   xvfb
 
-RUN npm install cy2
-RUN node ./symlink_frontend_repos.js
-RUN npx cypress run --env host=$CYPRESS_HOST
+RUN npx cypress install
+
+RUN node ./symlink_frontend_repos.js 
+
+CMD ["sh", "-c", "cd ./${APP} && npx cy2 run --parallel --record --key ${KEY} --config projectId=${APP} --ci-build-id ${APP}-`date +%s`"]
