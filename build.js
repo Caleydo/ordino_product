@@ -68,13 +68,13 @@ function toRepoUrl(url) {
     }
     // have a http url need an ssh url
     const m = url.match(/(https?:\/\/([^/]+)\/|git@(.+):)([\w\d-_/]+)(.git)?/);
-    return `git@${m[2]}:${m[4]}.git`;
+     return `git+ssh@${m[2]}:${m[4]}.git`;
   }
   if (!url.includes('/')) {
     url = `Caleydo/${url}`;
   }
   if (argv.useSSH) {
-    return `git@github.com:${url}.git`;
+     return `git+ssh@github.com:${url}.git`;
   }
   return `https://github.com/${url}.git`;
 }
@@ -220,10 +220,9 @@ function spawn(cmd, args, opts) {
  * @param cmd the command to execute as a string
  * @return {*}
  */
-function npm(cwd, cmd) {
-  console.log(cwd, chalk.blue('running npm', cmd));
-  const npm = process.platform === 'win32' ? 'npm.cmd' : 'npm';
-  return spawn(npm, (cmd || 'install').split(' '), {cwd, env});
+function yarn(cwd, cmd) {
+  console.log(cwd, chalk.blue('running yarn', cmd));
+  return spawn('yarn', (cmd || 'install').split(' '), {cwd, env});
 }
 
 /**
@@ -561,7 +560,8 @@ function fillDefaults(descs, dockerComposePatch) {
       delete dockerComposePatch.services[d.label].image;
     }
     // include hint in the tmp directory which one is it
-    d.tmpDir = `./tmp${i}_${d.name.replace(/\s+/, '').slice(0, 5)}`;
+    d.tmpDir = `./${d.tmpDir}` || `./tmp${i}_${d.name.replace(/\s+/, '').slice(0, 5)}`;
+    console.info("d.tmpDir", d.tmpDir);
   });
 
   return descs;
@@ -647,7 +647,7 @@ function buildDockerImage(p) {
   }
   const additionalType = (label, type) => {
     return fs.existsSync(`./templates/${type}/deploy/${label}`);
-  }
+   };
 
   let dockerFile;
    // check if label exists and use type as fallback
@@ -673,13 +673,13 @@ function createWorkspace(p) {
 }
 
 function installWebDependencies(p) {
-  return npm(p.tmpDir, 'install');
+  return yarn(p.tmpDir, 'install --no-immutable');
 }
 
 function showWebDependencies(p) {
   // `npm ls` fails if some peerDependencies are not installed
   // since this function is for debug purposes only, we catch possible errors of `npm()` and resolve it with status code `0`.
-  return npm(p.tmpDir, 'list --depth=1')
+  return yarn(p.tmpDir, 'info')
     .catch(() => Promise.resolve(0)); // status code = 0
 }
 
@@ -698,7 +698,7 @@ function resolvePluginTypes(p) {
 }
 
 function buildWeb(p) {
-  const step = npm(p.tmpDir, `run dist`);
+  const step = yarn(p.tmpDir, `run dist`);
   // move to target directory
   return step.then(() => fs.renameAsync(`${p.tmpDir}/dist/bundles.tar.gz`, `./build/${p.label}.tar.gz`));
 }
@@ -716,20 +716,23 @@ function showPythonTestDependencies(p) {
 }
 
 function buildServer(p) {
-  let act = npm(`${p.tmpDir}/${p.name}`, `run build${p.isHybridType ? ':python' : ''}`);
+  let act = spawn('make', ['build'], {cwd: `${p.tmpDir}/${p.name}`, env});
   for (const pi of p.additional) {
-    act = act.then(() => npm(`${p.tmpDir}/${pi.name}`, `run build${pi.isHybridType ? ':python' : ''}`));
+    act = act.then(() => spawn('make', ['build'], {cwd: `${p.tmpDir}/${pi.name}`, env}));
   }
 
   // copy all together
   act = act
-    .then(() => fs.ensureDirAsync(`${p.tmpDir}/build/source`))
-    .then(() => fs.copyAsync(`${p.tmpDir}/${p.name}/build/source`, `${p.tmpDir}/build/source/`))
-    .then(() => Promise.all(p.additional.map((pi) => fs.copyAsync(`${p.tmpDir}/${pi.name}/build/source`, `${p.tmpDir}/build/source/`))));
+    .then(() => fs.ensureDirAsync(`${p.tmpDir}/build/lib`))
+    .then(() => fs.copyAsync(`${p.tmpDir}/${p.name}/build/lib`, `${p.tmpDir}/build/source/`))
+    .then(() => fs.copyAsync(`${p.tmpDir}/${p.name}/${p.name.toLowerCase()}.egg-info`, `${p.tmpDir}/build/source/${p.name.toLowerCase()}.egg-info`))
+    .then(() => Promise.all(p.additional.map((pi) => fs.copyAsync(`${p.tmpDir}/${pi.name}/build/lib`, `${p.tmpDir}/build/source/`))))
+    .then(() => Promise.all(p.additional.map((pi) => fs.copyAsync(`${p.tmpDir}/${pi.name}/${pi.name.toLowerCase()}.egg-info`, `${p.tmpDir}/build/source/${pi.name.toLowerCase()}.egg-info`))));
 
   return act;
 }
 
+// TODO: Check if this is used anywhere, as it should be part of the new build process.
 function downloadServerDataFiles(p) {
   if (!argv.serial) {
     return Promise.all(p.data.map((d) => downloadDataFile(d, `${p.tmpDir}/build/source/_data`, p.tmpDir)));
