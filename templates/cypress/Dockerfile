@@ -1,4 +1,4 @@
-FROM node:16.17.0-buster 
+FROM node:16.17.1-slim
 
 WORKDIR /etc/frontend
 COPY ./ ./
@@ -13,8 +13,7 @@ ENV ELECTRON_EXTRA_LAUNCH_ARGS=--disable-gpu
 
 # to suppress tput: No value for $TERM and no -T specified
 ENV TERM=xterm
-
-RUN apt-get install          
+#RUN apt-get install          
 # https://docs.cypress.io/guides/continuous-integration/introduction#Dependencies 
 RUN apt-get update && apt-get install -y \
   libgtk2.0-0 \
