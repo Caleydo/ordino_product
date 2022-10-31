@@ -63,7 +63,7 @@ jobs:
             fi
   cypress: # the job is taken from https://docs.cypress.io/guides/guides/continuous-integration.html#Example-circleci-config-yml-v2-config-file
     docker:
-      - image: cypress/base:10
+      - image: cypress/base:16.18.0
         environment:
           ## this enables colors in the output
           TERM: xterm
