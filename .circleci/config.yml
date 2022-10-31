@@ -72,6 +72,11 @@ jobs:
     steps:
       - checkout
       - setup_remote_docker
+      - run:
+          name: Show Node.js and npm version
+          command: |
+            node -v
+            npm -v
       - restore_cache:
           key: deps1-{{ .Branch }}-{{ checksum "package.json" }}
       - run:
