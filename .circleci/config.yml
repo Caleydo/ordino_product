@@ -77,17 +77,17 @@ jobs:
           command: |
             node -v
             npm -v
-      - restore_cache:
-          key: deps2-{{ .Branch }}-{{ checksum "package.json" }}
-      - run:
-          name: install-npm-wee
-          command: npm install
-      - run:
-          name: Show installed npm dependencies
-          command: npm list --depth=1 || true
-      - save_cache:
-          key: deps2-{{ .Branch }}-{{ checksum "package.json" }}
-          paths: ./node_modules
+      # - restore_cache:
+      #     key: deps2-{{ .Branch }}-{{ checksum "package.json" }}
+      # - run:
+      #     name: install-npm-wee
+      #     command: npm install
+      # - run:
+      #     name: Show installed npm dependencies
+      #     command: npm list --depth=1 || true
+      # - save_cache:
+      #     key: deps2-{{ .Branch }}-{{ checksum "package.json" }}
+      #     paths: ./node_modules
       - deploy:
           name: build and deploy
           command: |
