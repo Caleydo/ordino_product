@@ -76,6 +76,10 @@ jobs:
       - checkout
       - setup_remote_docker
       - run:
+          name: Show git version
+          command: |
+            git --version
+      - run:
           name: Show Node.js and npm version
           command: |
             node -v
