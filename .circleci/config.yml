@@ -107,7 +107,7 @@ jobs:
       - deploy:
           name: Build workspace
           command: |
-            node build.js --injectVersion --skipSaveImage --skipTests --noDefaultTags
+            node build.js --injectVersion --skipSaveImage --skipTests --skipCleanUp --noDefaultTags
       - run:
           name: Run cypress tests
           command: |
