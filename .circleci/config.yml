@@ -113,13 +113,13 @@ workflows:
           context:
             - org-global      
   cypress-nightly:
-    triggers:
-      - schedule: # nightly test during weekday (2 hours after build)
-          cron: "15 3 * * 1-5"
-          filters:
-            branches:
-              only:
-                - develop
+    # triggers:
+    #   - schedule: # nightly test during weekday (2 hours after build)
+    #       cron: "15 3 * * 1-5"
+    #       filters:
+    #         branches:
+    #           only:
+    #             - develop
     jobs:
       - cypress
   build-branch:
