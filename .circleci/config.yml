@@ -78,7 +78,7 @@ jobs:
       - run:
           name: Install git
           command: |
-            apt-get update && apt-get install --no-install-recommends -y git
+            apt-get update && apt-get install --no-install-recommends -y git openssh-server
       - run:
           name: Show git version
           command: |
