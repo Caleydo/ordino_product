@@ -76,11 +76,6 @@ jobs:
       - checkout
       - setup_remote_docker
       - run:
-          name: Show Node.js and npm version
-          command: |
-            node -v
-            npm -v
-      - run:
           name: Install git
           command: |
             apt-get update && apt-get install --no-install-recommends -y git
@@ -89,6 +84,15 @@ jobs:
           command: |
             git --version
             which git
+      - run:
+          name: Which ssh
+          command: |
+            which ssh
+      - run:
+          name: Show Node.js and npm version
+          command: |
+            node -v
+            npm -v
       - restore_cache:
           key: deps2-{{ .Branch }}-{{ checksum "package.json" }}
       - run:
